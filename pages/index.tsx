@@ -3,6 +3,10 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import * as React from "react";
+import { Box } from "@mui/system";
+import Chip from "@mui/material/Chip";
+import Stack from "@mui/material/Stack";
+import { Avatar } from "@mui/material";
 
 const Home: NextPage = () => {
   return (
@@ -18,56 +22,47 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+        <h1 className={styles.title}>Callum McClure</h1>
+        <h2 className={styles.subtitle}>Software Engineer</h2>
+        <Stack direction="row" spacing={1}>
+          <Chip
+            label="Vue"
+            avatar={<Avatar src="/images/vue.svg" alt="Vue Logo" />}
+          />
+          <Chip
+            label="React"
+            avatar={<Avatar src="/images/react.svg" alt="React Logo" />}
+          />
+          <Chip
+            label="Node"
+            avatar={<Avatar src="/images/node.svg" alt="Node Logo" />}
+          />
+          <Chip
+            label="TypeScript"
+            avatar={
+              <Avatar src="/images/typescript.svg" alt="TypeScript Logo" />
+            }
+          />
+          <Chip
+            label="JavaScript"
+            avatar={
+              <Avatar src="/images/javascript.svg" alt="JavaScript Logo" />
+            }
+          />
+        </Stack>
+
+        {/* A section with a picture of me, a short bio and a link to my CV */}
         <p className={styles.description}>
-          Get started by editing{" "}
-          <code className={styles.code}>pages/index.tsx</code>
+          I am a software engineer based in the UK. I have a passion for
+          developing websites and applications. I am currently working at
+          Premier Systems Ltd as a Software Engineer
         </p>
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
+        <p className={styles.description}>
+          I am a passionate and dedicated software engineer. I am always looking
+          to learn new technologies and improve my skills.
+        </p>
       </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{" "}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
     </div>
   );
 };
