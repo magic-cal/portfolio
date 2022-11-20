@@ -7,6 +7,7 @@ import { Box } from "@mui/system";
 import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
 import { Avatar } from "@mui/material";
+import ChipStack from "../components/ChipStack";
 
 const Home: NextPage = () => {
   return (
@@ -24,32 +25,35 @@ const Home: NextPage = () => {
       <main className={styles.main}>
         <h1 className={styles.title}>Callum McClure</h1>
         <h2 className={styles.subtitle}>Software Engineer</h2>
-        <Stack direction="row" spacing={1}>
-          <Chip
-            label="Vue"
-            avatar={<Avatar src="/images/vue.svg" alt="Vue Logo" />}
-          />
-          <Chip
-            label="React"
-            avatar={<Avatar src="/images/react.svg" alt="React Logo" />}
-          />
-          <Chip
-            label="Node"
-            avatar={<Avatar src="/images/node.svg" alt="Node Logo" />}
-          />
-          <Chip
-            label="TypeScript"
-            avatar={
-              <Avatar src="/images/typescript.svg" alt="TypeScript Logo" />
-            }
-          />
-          <Chip
-            label="JavaScript"
-            avatar={
-              <Avatar src="/images/javascript.svg" alt="JavaScript Logo" />
-            }
-          />
-        </Stack>
+        <ChipStack
+          chips={[
+            {
+              label: "Vue",
+              avatar: "https://cdn.worldvectorlogo.com/logos/vue-9.svg",
+            },
+            {
+              label: "React",
+              avatar: "https://cdn.worldvectorlogo.com/logos/react-2.svg",
+            },
+            {
+              label: "Nuxt.js",
+              avatar: "https://cdn.worldvectorlogo.com/logos/nuxt-2.svg",
+            },
+            {
+              label: "Node.js",
+              avatar: "https://cdn.worldvectorlogo.com/logos/nodejs-2.svg",
+            },
+            {
+              label: "TypeScript",
+              avatar: "https://cdn.worldvectorlogo.com/logos/typescript.svg",
+            },
+            {
+              label: "JavaScript",
+              avatar:
+                "https://cdn.worldvectorlogo.com/logos/logo-javascript.svg",
+            },
+          ]}
+        />
 
         {/* A section with a picture of me, a short bio and a link to my CV */}
         <p className={styles.description}>
