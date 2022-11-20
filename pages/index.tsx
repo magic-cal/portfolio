@@ -8,6 +8,7 @@ import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
 import { Avatar } from "@mui/material";
 import ChipStack from "../components/ChipStack";
+import BackgroundThreeD from "../components/BackgroundThreeD";
 
 const Home: NextPage = () => {
   return (
@@ -25,6 +26,7 @@ const Home: NextPage = () => {
       <main className={styles.main}>
         <h1 className={styles.title}>Callum McClure</h1>
         <h2 className={styles.subtitle}>Software Engineer</h2>
+        <BackgroundThreeD />
         <ChipStack
           chips={[
             {
