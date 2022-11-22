@@ -4,11 +4,24 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { Stars, Plane, PerspectiveCamera } from "@react-three/drei";
 import { useScroll } from "./scroll";
 
-export default function BackgroundThreeD() {
+const styleObject = {
+  canvas: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    width: "100%",
+    "min-height": "100vh",
+  },
+};
+
+export default function BackgroundThreeD(props: React.PropsWithChildren<{}>) {
   return (
-    <Canvas>
-      <StarsScene />
-    </Canvas>
+    <div>
+      <Canvas style={styleObject.canvas}>
+        <StarsScene />
+      </Canvas>
+      {props.children}
+    </div>
   );
 }
 
@@ -23,6 +36,7 @@ function StarsScene() {
 
   return (
     <>
+      <Stars radius={100} />
       <Stars radius={500} />
       <Plane rotation-x={Math.PI / 2} args={[100, 100, 4, 4]} />
       <PerspectiveCamera ref={ref} makeDefault />
