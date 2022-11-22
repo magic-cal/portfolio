@@ -10,6 +10,8 @@ export interface ChipStackProps {
 export interface Chip {
   label: string;
   avatar: string;
+  clickable?: boolean;
+  onClick?: (event: Event) => void;
 }
 
 export default function ChipStack(props: ChipStackProps) {
@@ -19,6 +21,7 @@ export default function ChipStack(props: ChipStackProps) {
         key={chip.label}
         label={chip.label}
         avatar={<Avatar src={chip.avatar} />}
+        clickable={true}
       />
     );
   });
@@ -34,4 +37,5 @@ ChipStack.defaultProps = {
   chips: [],
   direction: "row",
   spacing: 1,
+  clickable: true,
 };
