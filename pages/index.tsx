@@ -37,6 +37,16 @@ const Home: NextPage = () => {
                     avatar: "https://cdn.worldvectorlogo.com/logos/vue-9.svg",
                   },
                   {
+                    label: "TypeScript",
+                    avatar:
+                      "https://cdn.worldvectorlogo.com/logos/typescript.svg",
+                  },
+                  {
+                    label: "JavaScript",
+                    avatar:
+                      "https://cdn.worldvectorlogo.com/logos/logo-javascript.svg",
+                  },
+                  {
                     label: "React",
                     avatar: "https://cdn.worldvectorlogo.com/logos/react-2.svg",
                   },
@@ -50,14 +60,13 @@ const Home: NextPage = () => {
                       "https://cdn.worldvectorlogo.com/logos/nodejs-2.svg",
                   },
                   {
-                    label: "TypeScript",
+                    label: "Python",
                     avatar:
-                      "https://cdn.worldvectorlogo.com/logos/typescript.svg",
+                      "https://cdn.worldvectorlogo.com/logos/python-5.svg",
                   },
                   {
-                    label: "JavaScript",
-                    avatar:
-                      "https://cdn.worldvectorlogo.com/logos/logo-javascript.svg",
+                    label: "PHP",
+                    avatar: "https://cdn.worldvectorlogo.com/logos/php-1.svg",
                   },
                 ]}
               />
