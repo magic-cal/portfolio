@@ -23,39 +23,47 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>Callum McClure</h1>
-        <h2 className={styles.subtitle}>Software Engineer</h2>
-        <BackgroundThreeD />
-        <ChipStack
-          chips={[
-            {
-              label: "Vue",
-              avatar: "https://cdn.worldvectorlogo.com/logos/vue-9.svg",
-            },
-            {
-              label: "React",
-              avatar: "https://cdn.worldvectorlogo.com/logos/react-2.svg",
-            },
-            {
-              label: "Nuxt.js",
-              avatar: "https://cdn.worldvectorlogo.com/logos/nuxt-2.svg",
-            },
-            {
-              label: "Node.js",
-              avatar: "https://cdn.worldvectorlogo.com/logos/nodejs-2.svg",
-            },
-            {
-              label: "TypeScript",
-              avatar: "https://cdn.worldvectorlogo.com/logos/typescript.svg",
-            },
-            {
-              label: "JavaScript",
-              avatar:
-                "https://cdn.worldvectorlogo.com/logos/logo-javascript.svg",
-            },
-          ]}
-        />
+      <main>
+        <BackgroundThreeD>
+          <div className={styles.main}>
+            <h1 className={styles.title}>Callum McClure</h1>
+            <h2 className={styles.subtitle}>Software Engineer</h2>
+            {/* @TODO: Move clips to a content file */}
+            <Box alignItems="center">
+              <ChipStack
+                chips={[
+                  {
+                    label: "Vue",
+                    avatar: "https://cdn.worldvectorlogo.com/logos/vue-9.svg",
+                  },
+                  {
+                    label: "React",
+                    avatar: "https://cdn.worldvectorlogo.com/logos/react-2.svg",
+                  },
+                  {
+                    label: "Nuxt.js",
+                    avatar: "https://cdn.worldvectorlogo.com/logos/nuxt-2.svg",
+                  },
+                  {
+                    label: "Node.js",
+                    avatar:
+                      "https://cdn.worldvectorlogo.com/logos/nodejs-2.svg",
+                  },
+                  {
+                    label: "TypeScript",
+                    avatar:
+                      "https://cdn.worldvectorlogo.com/logos/typescript.svg",
+                  },
+                  {
+                    label: "JavaScript",
+                    avatar:
+                      "https://cdn.worldvectorlogo.com/logos/logo-javascript.svg",
+                  },
+                ]}
+              />
+            </Box>
+          </div>
+        </BackgroundThreeD>
 
         {/* A section with a picture of me, a short bio and a link to my CV */}
         <p className={styles.description}>
@@ -63,11 +71,29 @@ const Home: NextPage = () => {
           developing websites and applications. I am currently working at
           Premier Systems Ltd as a Software Engineer
         </p>
-
         <p className={styles.description}>
           I am a passionate and dedicated software engineer. I am always looking
           to learn new technologies and improve my skills.
         </p>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
       </main>
     </div>
   );

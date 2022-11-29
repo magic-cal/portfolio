@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Chip, Avatar, Stack } from "@mui/material";
+import { Chip, Avatar, Stack, Grid } from "@mui/material";
 
 export interface ChipStackProps {
   chips: Chip[];
@@ -17,19 +17,22 @@ export interface Chip {
 export default function ChipStack(props: ChipStackProps) {
   const chips = props.chips.map((chip) => {
     return (
-      <Chip
-        key={chip.label}
-        label={chip.label}
-        avatar={<Avatar src={chip.avatar} />}
-        clickable={true}
-      />
+      <Grid item key={chip.label}>
+        <Chip
+          label={chip.label}
+          avatar={<Avatar src={chip.avatar} />}
+          clickable={true}
+        />
+      </Grid>
     );
   });
 
   return (
-    <Stack direction={props.direction} spacing={props.spacing}>
+    <Grid container spacing={props.spacing} justifyContent="center">
+      {/* <Stack > */}
       {chips}
-    </Stack>
+      {/* </Stack> */}
+    </Grid>
   );
 }
 
