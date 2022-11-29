@@ -3,6 +3,7 @@ import { useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Stars, Plane, PerspectiveCamera } from "@react-three/drei";
 import { useScroll } from "./scroll";
+import { useReducedMotion } from "./hooks/useReducedMotion";
 
 const styleObject = {
   canvas: {
@@ -15,6 +16,7 @@ const styleObject = {
 };
 
 export default function BackgroundThreeD(props: React.PropsWithChildren<{}>) {
+  // @TODO: Allow turning off of motion if user prefers reduced motion
   return (
     <div>
       <Canvas style={styleObject.canvas}>
@@ -28,10 +30,13 @@ export default function BackgroundThreeD(props: React.PropsWithChildren<{}>) {
 function StarsScene() {
   const { scrollOffset } = useScroll();
   const ref = useRef<any>();
+  const reducedMotion = useReducedMotion();
 
   useFrame(() => {
-    ref.current.rotation.x = scrollOffset * 0.0005;
-    ref.current.rotation.z += 0.0001;
+    if (!reducedMotion) {
+      ref.current.rotation.x = scrollOffset * 0.0005;
+      ref.current.rotation.z += 0.0001;
+    }
   });
 
   return (
