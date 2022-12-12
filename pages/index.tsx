@@ -4,14 +4,14 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import * as React from "react";
 import { Box } from "@mui/system";
-import Chip from "@mui/material/Chip";
-import Stack from "@mui/material/Stack";
-import { Avatar } from "@mui/material";
+import { Grid, IconButton } from "@mui/material";
 import ChipStack from "../components/ChipStack";
 import BackgroundThreeD from "../components/BackgroundThreeD";
 import ProjectSummaries from "../components/sections/projectSummaries";
 import { highlightTechnologies } from "../components/data/technologies";
 import { projects } from "../components/data/projects";
+import ExpandMore from "@mui/icons-material/ExpandMore";
+import Link from "next/link";
 
 const Home: NextPage = () => {
   return (
@@ -35,14 +35,23 @@ const Home: NextPage = () => {
             <Box alignItems="center">
               <ChipStack chips={highlightTechnologies} />
             </Box>
+            <Grid justifyItems="center" sx={{ pt: 2 }}>
+              <Grid item>
+                <Link href="#projects" scroll={false}>
+                  <IconButton aria-label="more" size="large" color="secondary">
+                    <ExpandMore fontSize="large" />
+                  </IconButton>
+                </Link>
+              </Grid>
+            </Grid>
           </div>
         </BackgroundThreeD>
 
         {/* A section with a picture of me, a short bio and a link to my CV */}
-        <p className={styles.description}>
+        {/* <p className={styles.description}>
           I am a Software engineer who combines a passion magic with a passion
           for technology to create unique and engaging experiences.
-        </p>
+        </p> */}
 
         <ProjectSummaries projects={projects} />
 
