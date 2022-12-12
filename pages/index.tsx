@@ -11,6 +11,7 @@ import ChipStack from "../components/ChipStack";
 import BackgroundThreeD from "../components/BackgroundThreeD";
 import ProjectSummaries from "../components/sections/projectSummaries";
 import { highlightTechnologies } from "../components/data/technologies";
+import { projects } from "../components/data/projects";
 
 const Home: NextPage = () => {
   return (
@@ -43,7 +44,7 @@ const Home: NextPage = () => {
           for technology to create unique and engaging experiences.
         </p>
 
-        <ProjectSummaries />
+        <ProjectSummaries projects={projects} />
 
         <br />
         <br />

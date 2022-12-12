@@ -8,72 +8,13 @@ import {
   CardMedia,
 } from "@mui/material";
 import ChipStack from "../ChipStack";
-import AmberImage from "../../public/images/projects/Amber.png";
-import Image from "next/image";
-import { technologies } from "../data/technologies";
+import { ProjectSummary } from "../data/projects";
 
-const projects = [
-  {
-    id: "1",
-    title: "Amber - Vessel Scheduler",
-    description:
-      "A web application for planning and scheduling vessels for breweries and distilleries.",
-    image: "/images/projects/Amber.png",
-    technologies: [
-      technologies.Vue,
-      technologies.TypeScript,
-      technologies.NodeJs,
-      technologies.Express,
-      technologies.SQL,
-      technologies.Swagger,
-    ],
-  },
-  {
-    id: "2",
-    title: "The Chase Web app Game",
-    description:
-      "A web application for playing The Chase game with friends. Live questions are fetched from a Quiz API and answered live with WebSockets.",
-    image: null,
-    technologies: [
-      technologies.Vue,
-      technologies.JavaScript,
-      technologies.NodeJs,
-      technologies.Express,
-      technologies.WebSockets,
-    ],
-  },
-  {
-    id: "3",
-    title: "IBM Subversive",
-    description:
-      "International competition to highlight security vulnerabilities in every day locations. A small team of 4 created a real shopping center model and a web application to simulate a cyber attacks.",
-    image: null,
-    technologies: [
-      technologies.Python,
-      technologies.CPP,
-      technologies.Arduino,
-      technologies.RasPi,
-      technologies.HTML,
-      technologies.CSS,
-      technologies.JavaScript,
-    ],
-  },
-  {
-    id: "4",
-    title: "FInsult",
-    description:
-      "A fun project to identify people in images and generate insults based on their facial expressions.",
-    image: null,
-    technologies: [
-      technologies.JavaScript,
-      technologies.NodeJs,
-      technologies.Express,
-    ],
-    github: "https://github.com/up730418/subversive",
-  },
-];
+export interface ProjectSummariesProps {
+  projects: ProjectSummary[];
+}
 
-export default function ProjectSummaries() {
+export default function ProjectSummaries(props: ProjectSummariesProps) {
   return (
     // @ts-ignore - type complex
     <Box>
@@ -86,7 +27,7 @@ export default function ProjectSummaries() {
         gridTemplateColumns="1fr"
         gridAutoFlow="column"
       >
-        {projects.map((project) => (
+        {props.projects.map((project) => (
           <Grid item xs={12} sm={6} md={4} key={project.id}>
             <Card>
               <CardContent>
@@ -108,11 +49,7 @@ export default function ProjectSummaries() {
                 >
                   {project.description}
                 </Typography>
-                <ChipStack
-                  chips={project.technologies}
-                  // add padding top
-                  sx={{ pt: 4 }}
-                />
+                <ChipStack chips={project.technologies} />
               </CardContent>
             </Card>
           </Grid>

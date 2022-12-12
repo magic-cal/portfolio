@@ -14,7 +14,7 @@ const canvas = {
 };
 
 export default function BackgroundThreeD(props: React.PropsWithChildren<{}>) {
-  // @TODO: Allow turning off of motion if user prefers reduced motion
+  // Allows turning off of motion if user prefers reduced motion
   return (
     <div>
       <Canvas style={canvas}>
