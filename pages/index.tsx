@@ -9,6 +9,8 @@ import Stack from "@mui/material/Stack";
 import { Avatar } from "@mui/material";
 import ChipStack from "../components/ChipStack";
 import BackgroundThreeD from "../components/BackgroundThreeD";
+import ProjectSummaries from "../components/sections/projectSummaries";
+import { highlightTechnologies } from "../components/data/technologies";
 
 const Home: NextPage = () => {
   return (
@@ -30,60 +32,19 @@ const Home: NextPage = () => {
             <h2 className={styles.subtitle}>Software Engineer</h2>
             {/* @TODO: Move clips to a content file */}
             <Box alignItems="center">
-              <ChipStack
-                chips={[
-                  {
-                    label: "Vue",
-                    avatar: "https://cdn.worldvectorlogo.com/logos/vue-9.svg",
-                  },
-                  {
-                    label: "TypeScript",
-                    avatar:
-                      "https://cdn.worldvectorlogo.com/logos/typescript.svg",
-                  },
-                  {
-                    label: "JavaScript",
-                    avatar:
-                      "https://cdn.worldvectorlogo.com/logos/logo-javascript.svg",
-                  },
-                  {
-                    label: "React",
-                    avatar: "https://cdn.worldvectorlogo.com/logos/react-2.svg",
-                  },
-                  {
-                    label: "Nuxt.js",
-                    avatar: "https://cdn.worldvectorlogo.com/logos/nuxt-2.svg",
-                  },
-                  {
-                    label: "Node.js",
-                    avatar:
-                      "https://cdn.worldvectorlogo.com/logos/nodejs-2.svg",
-                  },
-                  {
-                    label: "Python",
-                    avatar:
-                      "https://cdn.worldvectorlogo.com/logos/python-5.svg",
-                  },
-                  {
-                    label: "PHP",
-                    avatar: "https://cdn.worldvectorlogo.com/logos/php-1.svg",
-                  },
-                ]}
-              />
+              <ChipStack chips={highlightTechnologies} />
             </Box>
           </div>
         </BackgroundThreeD>
 
         {/* A section with a picture of me, a short bio and a link to my CV */}
         <p className={styles.description}>
-          I am a software engineer based in the UK. I have a passion for
-          developing websites and applications. I am currently working at
-          Premier Systems Ltd as a Software Engineer
+          I am a Software engineer who combines a passion magic with a passion
+          for technology to create unique and engaging experiences.
         </p>
-        <p className={styles.description}>
-          I am a passionate and dedicated software engineer. I am always looking
-          to learn new technologies and improve my skills.
-        </p>
+
+        <ProjectSummaries />
+
         <br />
         <br />
         <br />
