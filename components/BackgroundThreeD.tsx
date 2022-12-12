@@ -2,24 +2,22 @@ import * as React from "react";
 import { useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Stars, Plane, PerspectiveCamera } from "@react-three/drei";
-import { useScroll } from "./scroll";
+import { useScroll } from "./hooks/scroll";
 import { useReducedMotion } from "./hooks/useReducedMotion";
 
-const styleObject = {
-  canvas: {
-    position: "absolute",
-    top: 0,
-    left: 0,
-    width: "100%",
-    "min-height": "100vh",
-  },
+const canvas = {
+  position: "absolute",
+  top: 0,
+  left: 0,
+  width: "100%",
+  minHeight: "100vh",
 };
 
 export default function BackgroundThreeD(props: React.PropsWithChildren<{}>) {
   // @TODO: Allow turning off of motion if user prefers reduced motion
   return (
     <div>
-      <Canvas style={styleObject.canvas}>
+      <Canvas style={canvas}>
         <StarsScene />
       </Canvas>
       {props.children}
