@@ -6,11 +6,26 @@ export interface ProjectSummary {
   description: string;
   image: string | null;
   technologies: Technology[];
+  github?: string;
 }
 
 export const projects: ProjectSummary[] = [
   {
     id: "1",
+    title: "The Chase Multiplayer Game",
+    description:
+      "A web application for playing The Chase game with friends. Live questions are fetched from a Quiz API and answered live with WebSockets.",
+    image: "/images/projects/TheChase.png",
+    technologies: [
+      technologies.Vue,
+      technologies.JavaScript,
+      technologies.NodeJs,
+      technologies.Express,
+      technologies.WebSockets,
+    ],
+  },
+  {
+    id: "2",
     title: "Amber - Vessel Scheduler",
     description:
       "A web application for planning and scheduling vessels for breweries and distilleries.",
@@ -22,20 +37,6 @@ export const projects: ProjectSummary[] = [
       technologies.Express,
       technologies.Postgres,
       technologies.Swagger,
-    ],
-  },
-  {
-    id: "2",
-    title: "The Chase Multiplayer Game",
-    description:
-      "A web application for playing The Chase game with friends. Live questions are fetched from a Quiz API and answered live with WebSockets.",
-    image: "/images/projects/TheChase.png",
-    technologies: [
-      technologies.Vue,
-      technologies.JavaScript,
-      technologies.NodeJs,
-      technologies.Express,
-      technologies.WebSockets,
     ],
   },
   {

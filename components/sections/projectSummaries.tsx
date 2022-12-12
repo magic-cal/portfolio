@@ -6,28 +6,40 @@ import {
   Card,
   CardContent,
   CardMedia,
+  Divider,
+  Button,
 } from "@mui/material";
 import ChipStack from "../ChipStack";
 import { ProjectSummary } from "../data/projects";
+import ExpandMore from "@mui/icons-material/ExpandMore";
+import ExpandLess from "@mui/icons-material/ExpandLess";
+import { useState } from "react";
 
 export interface ProjectSummariesProps {
   projects: ProjectSummary[];
 }
 
 export default function ProjectSummaries(props: ProjectSummariesProps) {
+  const minNumberOfProjects = 3;
+  const [areSummariesExpanded, setAreSummariesExpanded] = useState(false);
+
+  const projects = areSummariesExpanded
+    ? props.projects
+    : props.projects.slice(0, minNumberOfProjects);
+
+  const toggleExpanded = () => {
+    setAreSummariesExpanded(!areSummariesExpanded);
+  };
+
   return (
     // @ts-ignore - type complex
     <Box>
-      <Typography variant="h2" component="h2" gutterBottom>
+      <Divider sx={{ bgcolor: "secondary.dark" }} />
+      <Typography variant="h2" component="h2" gutterBottom id="projects">
         Projects
       </Typography>
-      <Grid
-        container
-        spacing={2}
-        gridTemplateColumns="1fr"
-        gridAutoFlow="column"
-      >
-        {props.projects.map((project) => (
+      <Grid container spacing={2} justifyContent="center" sx={{ pb: 2 }}>
+        {projects.map((project) => (
           <Grid item xs={12} sm={6} md={4} key={project.id}>
             <Card>
               <CardContent>
@@ -54,6 +66,20 @@ export default function ProjectSummaries(props: ProjectSummariesProps) {
             </Card>
           </Grid>
         ))}
+      </Grid>
+      {/* More button to expand and collapse the extra values */}
+      <Grid container justifyContent="center">
+        <Grid item>
+          <Button
+            variant="outlined"
+            endIcon={areSummariesExpanded ? <ExpandLess /> : <ExpandMore />}
+            onClick={toggleExpanded}
+            size="large"
+            color="secondary"
+          >
+            {areSummariesExpanded ? "Less" : "More"}
+          </Button>
+        </Grid>
       </Grid>
     </Box>
   );
