@@ -1,3 +1,9 @@
+export interface Technology {
+  label: string;
+  avatar: string;
+  highlight: boolean;
+}
+
 export const technologies = {
   Vue: {
     label: "Vue",
@@ -12,7 +18,7 @@ export const technologies = {
   JavaScript: {
     label: "JavaScript",
     avatar: "https://cdn.worldvectorlogo.com/logos/logo-javascript.svg",
-    highlight: true,
+    highlight: false,
   },
   React: {
     label: "React",
@@ -22,7 +28,7 @@ export const technologies = {
   NuxtJs: {
     label: "Nuxt.js",
     avatar: "https://cdn.worldvectorlogo.com/logos/nuxt-2.svg",
-    highlight: true,
+    highlight: false,
   },
   NodeJs: {
     label: "Node.js",
@@ -41,13 +47,13 @@ export const technologies = {
   },
   SQL: {
     label: "SQL",
-    avatar: "https://cdn.worldvectorlogo.com/logos/sql.svg",
+    avatar: "https://cdn.worldvectorlogo.com/logos/postgresql.svg",
     highlight: true,
   },
   WebSockets: {
     label: "WebSockets",
     avatar: "https://cdn.worldvectorlogo.com/logos/websockets.svg",
-    highlight: true,
+    highlight: false,
   },
   CPP: {
     label: "C++",
@@ -89,14 +95,9 @@ export const technologies = {
     avatar: "https://cdn.worldvectorlogo.com/logos/java-4.svg",
     highlight: false,
   },
-  MySQL: {
-    label: "MySQL",
-    avatar: "https://cdn.worldvectorlogo.com/logos/mysql-6.svg",
-    highlight: false,
-  },
-  MongoDB: {
-    label: "MongoDB",
-    avatar: "https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg",
+  Postgres: {
+    label: "Postgres",
+    avatar: "https://cdn.worldvectorlogo.com/logos/postgresql.svg",
     highlight: false,
   },
   Docker: {
