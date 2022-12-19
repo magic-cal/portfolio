@@ -6,7 +6,7 @@ import { useScroll } from "./hooks/scroll";
 import { useReducedMotion } from "./hooks/useReducedMotion";
 
 const canvas = {
-  position: "absolute",
+  position: "absolute" as "absolute",
   top: 0,
   left: 0,
   width: "100%",
