@@ -7,6 +7,7 @@ export interface ProjectSummary {
   image: string | null;
   technologies: Technology[];
   github?: string;
+  url?: string;
 }
 
 export const projects: ProjectSummary[] = [
@@ -67,5 +68,20 @@ export const projects: ProjectSummary[] = [
       technologies.Express,
     ],
     github: "https://github.com/up730418/subversive",
+  },
+  {
+    id: "5",
+    title: "Live Trampolining Scoreboard",
+    description:
+      "A live scoreboard that retrieves scores from `swescore` and displays them on a scoreboard in realtime. Scores are collated from many active devices with WebSockets and updated live, stacking the incoming scores. Built to support unreliable internet connections at SUTL events.",
+    image: "/images/projects/LiveScore.png",
+    technologies: [
+      technologies.Vue,
+      technologies.TypeScript,
+      technologies.NodeJs,
+      technologies.Express,
+      technologies.SQL,
+      technologies.WebSockets,
+    ],
   },
 ];
