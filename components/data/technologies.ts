@@ -4,6 +4,7 @@ export interface Technology {
   highlight: boolean;
 }
 
+// @todo: move images to static folder
 export const technologies = {
   Vue: {
     label: "Vue",
@@ -47,12 +48,12 @@ export const technologies = {
   },
   SQL: {
     label: "SQL",
-    avatar: "https://cdn.worldvectorlogo.com/logos/postgresql.svg",
+    avatar: "/images/logos/sql.png",
     highlight: true,
   },
   WebSockets: {
     label: "WebSockets",
-    avatar: "https://cdn.worldvectorlogo.com/logos/websockets.svg",
+    avatar: "/images/logos/websocket.png",
     highlight: false,
   },
   CPP: {
@@ -72,12 +73,12 @@ export const technologies = {
   },
   HTML: {
     label: "HTML",
-    avatar: "https://cdn.worldvectorlogo.com/logos/html5.svg",
+    avatar: "/images/logos/html.svg",
     highlight: false,
   },
   CSS: {
     label: "CSS",
-    avatar: "https://cdn.worldvectorlogo.com/logos/css-5.svg",
+    avatar: "/images/logos/css.svg",
     highlight: false,
   },
   Express: {
@@ -87,7 +88,7 @@ export const technologies = {
   },
   Swagger: {
     label: "Swagger",
-    avatar: "https://cdn.worldvectorlogo.com/logos/swagger.svg",
+    avatar: "/images/logos/swagger.svg",
     highlight: false,
   },
   Java: {
