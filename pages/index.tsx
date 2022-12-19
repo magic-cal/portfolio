@@ -12,6 +12,7 @@ import { highlightTechnologies } from "../components/data/technologies";
 import { projects } from "../components/data/projects";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 import Link from "next/link";
+import About from "../components/sections/about";
 
 const Home: NextPage = () => {
   return (
@@ -54,6 +55,8 @@ const Home: NextPage = () => {
         </p> */}
 
         <ProjectSummaries projects={projects} />
+
+        <About />
 
         <br />
         <br />
