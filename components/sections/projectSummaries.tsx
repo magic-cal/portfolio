@@ -32,7 +32,6 @@ export default function ProjectSummaries(props: ProjectSummariesProps) {
   };
 
   return (
-    // @ts-ignore - type complexadd
     <Box sx={{ pb: 2 }}>
       <Divider sx={{ bgcolor: "secondary.dark" }} />
       <Typography variant="h2" component="h2" gutterBottom id="projects">
