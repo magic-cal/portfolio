@@ -32,7 +32,7 @@ export default function ProjectSummaries(props: ProjectSummariesProps) {
   };
 
   return (
-    <Box sx={{ pb: 2 }}>
+    <Box component="div" sx={{ pb: 2 }}>
       <Divider sx={{ bgcolor: "secondary.dark" }} />
       <Typography variant="h2" component="h2" gutterBottom id="projects">
         Projects

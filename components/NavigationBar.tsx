@@ -8,7 +8,7 @@ import { IconButton } from "@mui/material";
 
 export default function SearchAppBar() {
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box component="div" sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
           <IconButton

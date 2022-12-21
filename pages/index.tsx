@@ -33,7 +33,7 @@ const Home: NextPage = () => {
             <h1 className={styles.title}>Callum McClure</h1>
             <h2 className={styles.subtitle}>Software Engineer</h2>
             {/* @TODO: Move clips to a content file */}
-            <Box alignItems="center">
+            <Box component="div" alignItems="center">
               <ChipStack chips={highlightTechnologies} />
             </Box>
             <Grid justifyItems="center" sx={{ pt: 2 }}>
