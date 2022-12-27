@@ -8,7 +8,7 @@ import LaptopContentFrame from "../laptopContentFrame";
 import Image from "next/image";
 
 const framedImage = (src: string, alt: string) => (
-  <LaptopContentFrame sx={{ minHeight: { xs: "100px", md: "200px" } }}>
+  <LaptopContentFrame>
     <div
       style={{
         position: "relative",
