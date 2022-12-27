@@ -38,7 +38,7 @@ const Home: NextPage = () => {
             </Box>
             <Grid justifyItems="center" sx={{ pt: 2 }}>
               <Grid item>
-                <Link href="#projects" scroll={false}>
+                <Link href="#about" scroll={false}>
                   <IconButton aria-label="more" size="large" color="secondary">
                     <ExpandMore fontSize="large" />
                   </IconButton>
