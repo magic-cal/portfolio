@@ -12,21 +12,24 @@ export interface ContentImageViewProps {
 
 export default function ContentImageView(props: ContentImageViewProps) {
   const image = (
-    <Image src={props.imgSrc} alt={props.imgAlt} height="100%" width="100%" />
-    // <div style={{ border: "1px solid red" }}>
-    //   <Image src={props.imgSrc} alt={props.imgAlt} height="100%" width="100%" />
-    // </div>
-  );
-
-  const content = (
-    <Card
-      sx={{
-        padding: "1rem",
+    <div
+      style={{
+        position: "relative",
+        width: "100%",
+        height: "100%",
+        minHeight: "200px",
       }}
     >
-      {props.mainContent}
-    </Card>
+      <Image
+        src={props.imgSrc}
+        alt={props.imgAlt}
+        layout="fill"
+        objectFit="contain"
+      />
+    </div>
   );
+
+  const content = <div>{props.mainContent}</div>;
 
   return (
     <>

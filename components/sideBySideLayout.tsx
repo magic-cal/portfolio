@@ -15,9 +15,15 @@ export default function SideBySideLayout(props: SideBySideLayoutProps) {
       );
   return (
     <>
-      <Grid container spacing={2} justifyContent="center" sx={{ pb: 2 }}>
+      <Grid
+        container
+        direction="row"
+        spacing={2}
+        justifyContent="center"
+        sx={{ pb: 2 }}
+      >
         {content.map((c, index) => (
-          <Grid item xs={12} sm={6} key={index} height="100%">
+          <Grid item xs={12} sm={6} key={index} style={{ display: "flex" }}>
             {c}
           </Grid>
         ))}
