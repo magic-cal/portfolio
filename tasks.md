@@ -8,4 +8,6 @@
 
 ## Issues
 
+- Set 3d models to be larger on about section
+
 ## Technical
