@@ -11,7 +11,11 @@ import {
 import { Group, Object3D } from "three";
 import { GltfObjectMap } from "./data/threeJsUtils";
 
-function Model(props: PropsWithChildren) {
+export type LaptopContentFrameProps = PropsWithChildren & {
+  style?: React.CSSProperties;
+};
+
+function Model(props: LaptopContentFrameProps) {
   const group = useRef<Group>(null);
   const { nodes, materials } = useGLTF(
     "/models/mac-draco.glb"
@@ -61,13 +65,20 @@ function Model(props: PropsWithChildren) {
             <Html
               className="content"
               rotation-x={-Math.PI / 2}
-              position={[0, 0.05, -0.09]}
+              position={[0, 0.04, -0.5]}
               transform
-              occlude
+              occlude // Hide content behind other objects
             >
               <div
                 className="wrapper"
                 onPointerDown={(e) => e.stopPropagation()}
+                style={{
+                  width: "675px",
+                  height: "440px",
+                  transform: "scale(0.5)",
+                  backgroundColor: "black",
+                  borderRadius: "10px",
+                }}
               >
                 {props.children}
               </div>
@@ -90,23 +101,25 @@ function Model(props: PropsWithChildren) {
   );
 }
 
-export default function LaptopContentFrame(props: PropsWithChildren) {
+export default function LaptopContentFrame(props: LaptopContentFrameProps) {
   return (
-    <Canvas camera={{ position: [-5, 0, -15], fov: 55 }}>
-      <pointLight position={[10, 10, 10]} intensity={1.5} />
-      <Suspense fallback={null}>
-        <group rotation={[0, Math.PI, 0]} position={[0, 1, 0]}>
-          <Model>{props.children}</Model>
-        </group>
-        <Environment preset="city" />
-      </Suspense>
-      <ContactShadows position={[0, -4.5, 0]} scale={20} blur={2} far={4.5} />
-      <OrbitControls
-        enablePan={false}
-        enableZoom={false}
-        minPolarAngle={Math.PI / 2.2}
-        maxPolarAngle={Math.PI / 2.2}
-      />
-    </Canvas>
+    <Suspense fallback={<h1>loafing</h1>}>
+      <Canvas camera={{ position: [-5, 0, -15], fov: 55 }} {...props}>
+        <pointLight position={[10, 10, 10]} intensity={1.5} />
+        <Suspense fallback={null}>
+          <group rotation={[0, Math.PI, 0]} position={[0, 1, 0]}>
+            <Model {...props} />
+          </group>
+          <Environment preset="city" />
+        </Suspense>
+        <ContactShadows position={[0, -4.5, 0]} scale={20} blur={2} far={4.5} />
+        <OrbitControls
+          enablePan={false}
+          enableZoom={false}
+          minPolarAngle={Math.PI / 2.2}
+          maxPolarAngle={Math.PI / 2.2}
+        />
+      </Canvas>
+    </Suspense>
   );
 }
