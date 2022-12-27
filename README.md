@@ -2,7 +2,7 @@
 
 ## Contents
 
-- Information about me
+- About me
 - My interests and projects
 - Career history
 - Contact details

@@ -54,9 +54,8 @@ const Home: NextPage = () => {
           for technology to create unique and engaging experiences.
         </p> */}
 
-        <ProjectSummaries projects={projects} />
-
         <About />
+        <ProjectSummaries projects={projects} />
 
         <br />
         <br />
