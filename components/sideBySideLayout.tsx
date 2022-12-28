@@ -1,5 +1,6 @@
 import * as React from "react";
-import { Grid } from "@mui/material";
+import { Grid, Theme, useMediaQuery } from "@mui/material";
+import { is } from "@react-three/fiber/dist/declarations/src/core/utils";
 
 export interface SideBySideLayoutProps {
   mainContent: React.ReactNode;
@@ -8,11 +9,17 @@ export interface SideBySideLayoutProps {
 }
 
 export default function SideBySideLayout(props: SideBySideLayoutProps) {
-  const content = props.inverted
-    ? [props.additionalContent, props.mainContent]
-    : [props.mainContent, props.additionalContent].filter(
-        (c) => c !== undefined
-      );
+  const isMobileDisplay = useMediaQuery((theme: Theme) =>
+    theme.breakpoints.down("sm")
+  );
+
+  const content =
+    props.inverted && !isMobileDisplay
+      ? [props.additionalContent, props.mainContent]
+      : [props.mainContent, props.additionalContent].filter(
+          (c) => c !== undefined
+        );
+
   return (
     <>
       <Grid
