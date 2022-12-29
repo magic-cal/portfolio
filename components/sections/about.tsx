@@ -54,13 +54,14 @@ const aboutMagic = (
       Magic
     </Typography>
     <Typography color="text.secondary">
-      Callum is a member of The Magic Circle, the world&#39;s oldest and most
-      prestigious magic society. His specialty lies in performing close-up magic
-      at Weddings, Dinners, Balls and Parties of all kinds. Combining classic
-      magic and modern technology his goal is to to create unique and engaging
-      experiences. During his decade of performing experience, he has performed
-      at the Royal Variety after-show party, and for{" "}
-      <a href="https://www.bbc.co.uk/news/newsbeat-40847482">BBC News</a>.
+      Callum is a member of{" "}
+      <a href="https://www.themagiccircle.co.uk">The Magic Circle</a>, the
+      world&#39;s oldest and most prestigious magic society. His specialty lies
+      in performing close-up magic at Weddings, Dinners, Balls and Parties of
+      all kinds. Combining classic magic and modern technology his goal is to to
+      create unique and engaging experiences. During his decade of performing
+      experience, he has performed at the Royal Variety after-show party, and
+      for <a href="https://www.bbc.co.uk/news/newsbeat-40847482">BBC News</a>.
     </Typography>
   </div>
 );

@@ -5,6 +5,9 @@ import { Stars, Plane, PerspectiveCamera } from "@react-three/drei";
 import { useScroll } from "./hooks/scroll";
 import { useReducedMotion } from "./hooks/useReducedMotion";
 
+const panPlaneSpeed = 0.0001;
+const scrollPlaneSpeed = 0.0005;
+
 const canvas = {
   position: "absolute" as "absolute",
   top: 0,
@@ -32,8 +35,8 @@ function StarsScene() {
 
   useFrame(() => {
     if (!reducedMotion) {
-      ref.current.rotation.x = scrollOffset * 0.0005;
-      ref.current.rotation.z += 0.0001;
+      ref.current.rotation.x = scrollOffset * scrollPlaneSpeed;
+      ref.current.rotation.z += panPlaneSpeed;
     }
   });
 
