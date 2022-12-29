@@ -21,14 +21,14 @@ export interface ProjectSummariesProps {
 
 export default function ProjectSummaries(props: ProjectSummariesProps) {
   const minNumberOfProjects = 3;
-  const [areSummariesExpanded, setAreSummariesExpanded] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
 
-  const projects = areSummariesExpanded
+  const projects = isExpanded
     ? props.projects
     : props.projects.slice(0, minNumberOfProjects);
 
   const toggleExpanded = () => {
-    setAreSummariesExpanded(!areSummariesExpanded);
+    setIsExpanded(!isExpanded);
   };
 
   return (
@@ -85,12 +85,12 @@ export default function ProjectSummaries(props: ProjectSummariesProps) {
         <Grid item>
           <Button
             variant="outlined"
-            endIcon={areSummariesExpanded ? <ExpandLess /> : <ExpandMore />}
+            endIcon={isExpanded ? <ExpandLess /> : <ExpandMore />}
             onClick={toggleExpanded}
             size="large"
             color="secondary"
           >
-            {areSummariesExpanded ? "Less" : "More"}
+            {isExpanded ? "Less" : "More"}
           </Button>
         </Grid>
       </Grid>

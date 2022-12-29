@@ -10,22 +10,24 @@ import {
 } from "@react-three/drei";
 import { Group, Object3D } from "three";
 import { GltfObjectMap } from "./data/threeJsUtils";
+import { useReducedMotion } from "./hooks/useReducedMotion";
 
 export type LaptopContentFrameProps = PropsWithChildren & {
   style?: React.CSSProperties;
 };
 
 function Model(props: LaptopContentFrameProps) {
+  const reducedMotion = useReducedMotion();
   const group = useRef<Group>(null);
   const { nodes, materials } = useGLTF(
     "/models/mac-draco.glb"
   ) as GltfObjectMap;
 
   useFrame((state) => {
-    const t = state.clock.getElapsedTime();
-    if (!group.current) {
+    if (!group.current || reducedMotion) {
       return;
     }
+    const t = state.clock.getElapsedTime();
     group.current.rotation.x = THREE.MathUtils.lerp(
       group.current.rotation.x,
       Math.cos(t / 2) / 20 + 0.25,
