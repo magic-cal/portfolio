@@ -1,11 +1,12 @@
 import * as React from "react";
 
-import { Grid, Typography, Divider } from "@mui/material";
+import { Grid, Typography, Divider, Button } from "@mui/material";
 
 import SideBySideLayout from "../sideBySideLayout";
 import ContentImageView from "../contentImageView";
 import LaptopContentFrame from "../laptopContentFrame";
 import Image from "next/image";
+import { externalLinks } from "../data/links";
 
 const framedImage = (src: string, alt: string) => (
   <LaptopContentFrame>
@@ -40,8 +41,10 @@ const aboutMe = (
       <a href="https://vuejs.org/">Vue</a>, and{" "}
       <a href="https://nodejs.org/">Node.js</a>.
     </Typography>
-    <br />
-    <br></br>
+    <Typography color="text.secondary">
+      In his spare time, he enjoys playing tennis, developing new technology
+      based magic tricks, and exploring new places.
+    </Typography>
   </div>
 );
 
@@ -50,13 +53,14 @@ const aboutMagic = (
     <Typography variant="h5" component="h2">
       Magic
     </Typography>
-    <Typography variant="body1" color="text.secondary">
-      He is also a member of The Magic Circle, and is a professional magician.
-      He is the creator of a robot magician&#39;s assistant called Vernon and
-      has performed at the Royal Variety after-show party, and on{" "}
-      <a href="https://www.bbc.co.uk/news/newsbeat-40847482">BBC News</a>. In
-      his spare time, he enjoys playing tennis, developing new technology based
-      magic tricks, and exploring new places.
+    <Typography color="text.secondary">
+      Callum is a member of The Magic Circle, the world&#39;s oldest and most
+      prestigious magic society. His specialty lies in performing close-up magic
+      at Weddings, Dinners, Balls and Parties of all kinds. Combining classic
+      magic and modern technology his goal is to to create unique and engaging
+      experiences. During his decade of performing experience, he has performed
+      at the Royal Variety after-show party, and for{" "}
+      <a href="https://www.bbc.co.uk/news/newsbeat-40847482">BBC News</a>.
     </Typography>
   </div>
 );
@@ -66,7 +70,7 @@ const technologies = (
     <Typography variant="h5" component="h2">
       Technologies
     </Typography>
-    <Typography variant="body1" color="text.secondary">
+    <Typography color="text.secondary">
       Callum is proficient in a wide range of languages, but is most comfortable
       with JavaScript and TypeScript in the front and backend, with Vue(TS) as
       the preferred framework for front end. React, C#, Python, Java, and PHP
@@ -112,6 +116,15 @@ export default function About() {
               "IDE screenshot"
             )}
           />
+        </Grid>
+        <Grid item xs={12}>
+          <Button
+            variant="outlined"
+            color="secondary"
+            href={externalLinks.cv.url}
+          >
+            View CV
+          </Button>
         </Grid>
       </Grid>
     </>
