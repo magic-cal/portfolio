@@ -2,9 +2,9 @@ import * as React from "react";
 
 import { Grid, Typography, Divider, Button } from "@mui/material";
 
-import SideBySideLayout from "../sideBySideLayout";
-import ContentImageView from "../contentImageView";
-import LaptopContentFrame from "../laptopContentFrame";
+import SideBySideLayout from "../SideBySideLayout";
+import ContentImageView from "../ContentImageView";
+import LaptopContentFrame from "../LaptopContentFrame";
 import Image from "next/image";
 import { externalLinks } from "../data/links";
 

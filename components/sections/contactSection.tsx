@@ -12,8 +12,8 @@ import {
 import ChipStack from "../ChipStack";
 import { externalLinks, socialLinks } from "../data/links";
 import { linkToChip } from "../data/linkService";
-import SideBySideLayout from "../sideBySideLayout";
-import ContactForm from "./contactForm";
+import SideBySideLayout from "../SideBySideLayout";
+import ContactForm from "../ContactForm";
 
 const contactChips = socialLinks.map(linkToChip);
 

@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Card, Grid } from "@mui/material";
-import SideBySideLayout from "./sideBySideLayout";
+import SideBySideLayout from "./SideBySideLayout";
 import Image from "next/image";
 
 export interface ContentImageViewProps {

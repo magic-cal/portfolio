@@ -7,13 +7,13 @@ import { Box } from "@mui/system";
 import { Grid, IconButton } from "@mui/material";
 import ChipStack from "../components/ChipStack";
 import BackgroundThreeD from "../components/BackgroundThreeD";
-import ProjectSummaries from "../components/sections/projectSummaries";
+import ProjectSummaries from "../components/sections/ProjectSummaries";
 import { highlightTechnologies } from "../components/data/technologies";
 import { projects } from "../components/data/projects";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 import Link from "next/link";
-import About from "../components/sections/about";
-import ContactSection from "../components/sections/contactSection";
+import About from "../components/sections/About";
+import ContactSection from "../components/sections/ContactSection";
 
 const Home: NextPage = () => {
   return (
