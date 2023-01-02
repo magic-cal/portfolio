@@ -1,3 +1,10 @@
+export interface ExternalLink {
+  url: string;
+  text: string;
+  icon?: string;
+  imgSrc?: string;
+}
+
 export const externalLinks = {
   cv: {
     url: "https://drive.google.com/file/d/1GlwyTWSLw8eKNfviW1C9CEfxRYu4HxPX/view?usp=sharing",
@@ -7,6 +14,14 @@ export const externalLinks = {
   linkedIn: {
     url: "https://www.linkedin.com/in/callum-mcclure",
     text: "LinkedIn",
-    icon: "linkedin",
+    imgSrc: "/images/logos/linkedIn.svg",
+  },
+  github: {
+    url: "https://www.github.com/magic-cal",
+    text: "GitHub",
+    imgSrc:
+      "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
   },
 };
+
+export const socialLinks = [externalLinks.linkedIn, externalLinks.github];

@@ -13,6 +13,7 @@ import { projects } from "../components/data/projects";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 import Link from "next/link";
 import About from "../components/sections/about";
+import ContactSection from "../components/sections/contactSection";
 
 const Home: NextPage = () => {
   return (
@@ -56,6 +57,7 @@ const Home: NextPage = () => {
 
         <About />
         <ProjectSummaries projects={projects} />
+        <ContactSection />
 
         <br />
         <br />
