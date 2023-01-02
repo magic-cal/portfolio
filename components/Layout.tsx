@@ -19,6 +19,10 @@ const Layout = (props: any) => {
         {/* <ColorModeContext.Provider value={{ darkMode, setDarkMode }}> */}
         {props.children}
         {/* </ColorModeContext.Provider> */}
+        {/* Temporary footer space */}
+        <br />
+        <br />
+        <br />
       </ThemeProvider>
     </>
   );
