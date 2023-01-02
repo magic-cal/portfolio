@@ -9,7 +9,7 @@ import {
   OrbitControls,
 } from "@react-three/drei";
 import { Group, Object3D } from "three";
-import { GltfObjectMap } from "./data/threeJsUtils";
+import { GltfObjectMap } from "./utils/threeJsUtils";
 import { useReducedMotion } from "./hooks/useReducedMotion";
 
 export type LaptopContentFrameProps = PropsWithChildren & {
