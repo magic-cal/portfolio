@@ -13,6 +13,7 @@ import ChipStack from "../ChipStack";
 import { externalLinks, socialLinks } from "../data/links";
 import { linkToChip } from "../data/linkService";
 import SideBySideLayout from "../sideBySideLayout";
+import ContactForm from "./contactForm";
 
 const contactChips = socialLinks.map(linkToChip);
 
@@ -23,27 +24,23 @@ export default function ContactSection() {
       <Typography variant="h2" component="h2" gutterBottom id="contact">
         Contact
       </Typography>
-      <SideBySideLayout
-        mainContent={
-          <Grid container>
-            <Grid item xs={12}>
-              <Typography variant="body1" component="p" gutterBottom>
-                If you would like to get in touch with me, please send me an
-                email to{" "}
-                <a href="mailto:callum.mcclure98@gmail.com">
-                  callum.mcclure98@gmail.com
-                </a>{" "}
-                or find me on <a href={externalLinks.linkedIn.url}>LinkedIn</a>{" "}
-                or <a href={externalLinks.github.url}>GitHub</a>.
-              </Typography>
-            </Grid>
-            <Grid item xs={12}>
-              <ChipStack chips={contactChips} />
-            </Grid>
-          </Grid>
-        }
-        additionalContent={<></>}
-      />
+
+      <Grid container>
+        <Grid item xs={12}>
+          <Typography variant="body1" component="p" gutterBottom>
+            If you would like to get in touch with me, please send me an email
+            to{" "}
+            <a href="mailto:callum.mcclure98@gmail.com">
+              callum.mcclure98@gmail.com
+            </a>{" "}
+            or find me on <a href={externalLinks.linkedIn.url}>LinkedIn</a> or{" "}
+            <a href={externalLinks.github.url}>GitHub</a>.
+          </Typography>
+        </Grid>
+        <Grid item xs={12}>
+          <ChipStack chips={contactChips} />
+        </Grid>
+      </Grid>
     </Box>
   );
 }

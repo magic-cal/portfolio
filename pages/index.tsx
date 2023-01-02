@@ -49,35 +49,9 @@ const Home: NextPage = () => {
           </div>
         </BackgroundThreeD>
 
-        {/* A section with a picture of me, a short bio and a link to my CV */}
-        {/* <p className={styles.description}>
-          I am a Software engineer who combines a passion magic with a passion
-          for technology to create unique and engaging experiences.
-        </p> */}
-
         <About />
         <ProjectSummaries projects={projects} />
         <ContactSection />
-
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
       </main>
     </div>
   );
