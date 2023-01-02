@@ -11,7 +11,7 @@ export interface Chip {
   label: string;
   avatar: string;
   clickable?: boolean;
-  onClick?: (event: Event) => void;
+  onClick?: () => void;
 }
 
 export default function ChipStack(props: ChipStackProps) {
@@ -22,6 +22,7 @@ export default function ChipStack(props: ChipStackProps) {
           label={chip.label}
           avatar={<Avatar src={chip.avatar} />}
           clickable={true}
+          onClick={chip.onClick}
         />
       </Grid>
     );
