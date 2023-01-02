@@ -5,6 +5,7 @@ export interface ChipStackProps {
   chips: Chip[];
   direction?: "row" | "column";
   spacing?: number;
+  justify?: "center" | "flex-start" | "flex-end";
 }
 
 export interface Chip {
@@ -29,7 +30,7 @@ export default function ChipStack(props: ChipStackProps) {
   });
 
   return (
-    <Grid container spacing={props.spacing} justifyContent="center">
+    <Grid container spacing={props.spacing} justifyContent={props.justify}>
       {chips}
     </Grid>
   );

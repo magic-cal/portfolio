@@ -22,6 +22,15 @@ export const externalLinks = {
     imgSrc:
       "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
   },
+  email: {
+    url: "mailto:callum.mcclure98@gmail.com",
+    text: "Email",
+    icon: "email",
+  },
 };
 
-export const socialLinks = [externalLinks.linkedIn, externalLinks.github];
+export const socialLinks = [
+  externalLinks.linkedIn,
+  externalLinks.github,
+  externalLinks.email,
+];
