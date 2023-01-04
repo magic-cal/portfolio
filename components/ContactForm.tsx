@@ -1,34 +1,23 @@
 import React from "react";
-import {
-  Box,
-  Grid,
-  Typography,
-  Card,
-  CardContent,
-  CardMedia,
-  Divider,
-  Button,
-  TextField,
-} from "@mui/material";
+import { Box, Grid, Button, TextField } from "@mui/material";
 import { useContactForm } from "./hooks/contactForm";
 
 export default function ContactForm() {
-  const { fields, handleChange, validateForm, errors, handleSubmit } =
-    useContactForm();
+  const { handleChange, errors, handleSubmit } = useContactForm();
 
   return (
     <>
       <Box component="div" sx={{ pb: 2 }}>
         <form onSubmit={handleSubmit}>
-          {JSON.stringify({ ...fields })}
           <Grid container spacing={2}>
             <Grid item xs={12}>
               <TextField
-                name="name"
                 onChange={(e) => handleChange("name", e)}
                 label="Name"
                 color="secondary"
                 fullWidth
+                variant="standard"
+                focused
                 autoComplete="name"
                 {...(errors["name"] && {
                   error: true,
@@ -38,11 +27,12 @@ export default function ContactForm() {
             </Grid>
             <Grid item xs={12}>
               <TextField
-                name="email"
                 onChange={(e) => handleChange("email", e)}
                 label="Email"
                 color="secondary"
                 fullWidth
+                variant="standard"
+                focused
                 autoComplete="email"
                 {...(errors["email"] && {
                   error: true,
@@ -52,11 +42,12 @@ export default function ContactForm() {
             </Grid>
             <Grid item xs={12}>
               <TextField
-                name="phoneNumber"
                 onChange={(e) => handleChange("phoneNumber", e)}
                 label="Phone"
                 color="secondary"
                 fullWidth
+                variant="standard"
+                focused
                 autoComplete="tel"
                 {...(errors["phoneNumber"] && {
                   error: true,
@@ -66,11 +57,12 @@ export default function ContactForm() {
             </Grid>
             <Grid item xs={12}>
               <TextField
-                name="message"
                 onChange={(e) => handleChange("message", e)}
                 label="Message"
                 color="secondary"
                 fullWidth
+                variant="standard"
+                focused
                 multiline
                 rows={5}
                 autoComplete="tel"
@@ -85,7 +77,6 @@ export default function ContactForm() {
                 Submit
               </Button>
             </Grid>
-            <Grid item xs={12}></Grid>
           </Grid>
         </form>
       </Box>
