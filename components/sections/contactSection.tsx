@@ -20,6 +20,7 @@ const contactChips = socialLinks.map(linkToChip);
 export default function ContactSection() {
   return (
     <Box component="div" sx={{ pb: 2 }}>
+      <ContactForm />
       <Divider sx={{ bgcolor: "secondary.dark" }} />
       <Typography variant="h2" component="h2" gutterBottom id="contact">
         Contact
