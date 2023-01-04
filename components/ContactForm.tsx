@@ -17,7 +17,6 @@ export default function ContactForm() {
                 color="secondary"
                 fullWidth
                 variant="standard"
-                focused
                 autoComplete="name"
                 {...(errors["name"] && {
                   error: true,
@@ -32,7 +31,6 @@ export default function ContactForm() {
                 color="secondary"
                 fullWidth
                 variant="standard"
-                focused
                 autoComplete="email"
                 {...(errors["email"] && {
                   error: true,
@@ -47,7 +45,6 @@ export default function ContactForm() {
                 color="secondary"
                 fullWidth
                 variant="standard"
-                focused
                 autoComplete="tel"
                 {...(errors["phoneNumber"] && {
                   error: true,
@@ -62,7 +59,6 @@ export default function ContactForm() {
                 color="secondary"
                 fullWidth
                 variant="standard"
-                focused
                 multiline
                 rows={5}
                 autoComplete="tel"

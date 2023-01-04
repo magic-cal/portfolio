@@ -64,7 +64,7 @@ export const useContactForm = () => {
     if (!validateForm()) {
       return;
     }
-    console.log("Submitting form");
+    // Add this to a lambda server function
   };
 
   return {
