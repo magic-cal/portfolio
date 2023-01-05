@@ -6,124 +6,139 @@ export interface Technology {
 
 // @todo: move images to static folder
 export const technologies = {
-  Vue: {
+  vue: {
     label: "Vue",
     avatar: "https://cdn.worldvectorlogo.com/logos/vue-9.svg",
     highlight: true,
   },
-  TypeScript: {
+  typeScript: {
     label: "TypeScript",
     avatar: "https://cdn.worldvectorlogo.com/logos/typescript.svg",
     highlight: true,
   },
-  JavaScript: {
+  javaScript: {
     label: "JavaScript",
     avatar: "https://cdn.worldvectorlogo.com/logos/logo-javascript.svg",
     highlight: false,
   },
-  React: {
+  react: {
     label: "React",
     avatar: "https://cdn.worldvectorlogo.com/logos/react-2.svg",
     highlight: true,
   },
-  NuxtJs: {
+  nuxtJs: {
     label: "Nuxt.js",
     avatar: "https://cdn.worldvectorlogo.com/logos/nuxt-2.svg",
     highlight: false,
   },
-  NodeJs: {
+  nodeJs: {
     label: "Node.js",
     avatar: "https://cdn.worldvectorlogo.com/logos/nodejs-2.svg",
     highlight: true,
   },
-  Python: {
+  python: {
     label: "Python",
     avatar: "https://cdn.worldvectorlogo.com/logos/python-5.svg",
     highlight: true,
   },
-  PHP: {
+  php: {
     label: "PHP",
     avatar: "https://cdn.worldvectorlogo.com/logos/php-1.svg",
     highlight: true,
   },
-  SQL: {
+  sql: {
     label: "SQL",
     avatar: "/images/logos/sql.png",
     highlight: true,
   },
-  WebSockets: {
+  webSockets: {
     label: "WebSockets",
     avatar: "/images/logos/websocket.png",
     highlight: false,
   },
-  CPP: {
+  cpp: {
     label: "C++",
     avatar: "https://cdn.worldvectorlogo.com/logos/c.svg",
     highlight: false,
   },
-  Arduino: {
+  arduino: {
     label: "Arduino",
     avatar: "https://cdn.worldvectorlogo.com/logos/arduino-1.svg",
     highlight: false,
   },
-  RasPi: {
+  rasPi: {
     label: "Raspberry Pi",
     avatar: "https://cdn.worldvectorlogo.com/logos/raspberry-pi.svg",
     highlight: false,
   },
-  HTML: {
+  html: {
     label: "HTML",
     avatar: "/images/logos/html.svg",
     highlight: false,
   },
-  CSS: {
+  css: {
     label: "CSS",
     avatar: "/images/logos/css.svg",
     highlight: false,
   },
-  Express: {
+  express: {
     label: "Express",
     avatar: "https://cdn.worldvectorlogo.com/logos/express-109.svg",
     highlight: false,
   },
-  Swagger: {
+  swagger: {
     label: "Swagger",
     avatar: "/images/logos/swagger.svg",
     highlight: false,
   },
-  Java: {
+  java: {
     label: "Java",
     avatar: "https://cdn.worldvectorlogo.com/logos/java-4.svg",
     highlight: false,
   },
-  Postgres: {
+  postgres: {
     label: "Postgres",
     avatar: "https://cdn.worldvectorlogo.com/logos/postgresql.svg",
     highlight: false,
   },
-  Docker: {
+  docker: {
     label: "Docker",
     avatar: "https://cdn.worldvectorlogo.com/logos/docker.svg",
     highlight: false,
   },
-  Linux: {
+  linux: {
     label: "Linux",
     avatar: "https://cdn.worldvectorlogo.com/logos/linux-tux.svg",
     highlight: false,
   },
-  Git: {
+  git: {
     label: "Git",
     avatar: "https://cdn.worldvectorlogo.com/logos/git-icon.svg",
     highlight: false,
   },
-  GitHub: {
+  github: {
     label: "GitHub",
     avatar: "https://cdn.worldvectorlogo.com/logos/github-icon-1.svg",
     highlight: false,
   },
-  GitLab: {
+  gitLab: {
     label: "GitLab",
     avatar: "https://cdn.worldvectorlogo.com/logos/gitlab.svg",
+    highlight: false,
+  },
+  dotNet: {
+    label: ".NET",
+    avatar: "https://cdn.worldvectorlogo.com/logos/dot-net.svg",
+    highlight: false,
+  },
+  gcp: {
+    label: "GCP",
+    avatar: "https://cdn.worldvectorlogo.com/logos/google-cloud-platform.svg",
+    highlight: false,
+  },
+  threeJs: {
+    label: "Three.js",
+    avatar: "https://cdn.worldvectorlogo.com/logos/threejs-1.svg",
     highlight: false,
   },
 };

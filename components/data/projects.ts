@@ -17,11 +17,11 @@ export const theChase = {
     "A web application for playing The Chase game with friends. Live questions are fetched from a Quiz API and answered live with WebSockets.",
   image: "/images/projects/TheChase.png",
   technologies: [
-    technologies.Vue,
-    technologies.JavaScript,
-    technologies.NodeJs,
-    technologies.Express,
-    technologies.WebSockets,
+    technologies.vue,
+    technologies.javaScript,
+    technologies.nodeJs,
+    technologies.express,
+    technologies.webSockets,
   ],
 };
 export const amber = {
@@ -31,12 +31,12 @@ export const amber = {
     "A web application for planning and scheduling vessels for breweries and distilleries.",
   image: "/images/projects/Amber.png",
   technologies: [
-    technologies.Vue,
-    technologies.TypeScript,
-    technologies.NodeJs,
-    technologies.Express,
-    technologies.Postgres,
-    technologies.Swagger,
+    technologies.vue,
+    technologies.typeScript,
+    technologies.nodeJs,
+    technologies.express,
+    technologies.postgres,
+    technologies.swagger,
   ],
 };
 export const subversive = {
@@ -46,13 +46,13 @@ export const subversive = {
     "International competition to highlight security vulnerabilities in every day locations. A small team of 4 created a real shopping center model and a web application to simulate a cyber attacks.",
   image: "/images/projects/SubversiveIBM.png",
   technologies: [
-    technologies.Python,
-    technologies.CPP,
-    technologies.Arduino,
-    technologies.RasPi,
-    technologies.HTML,
-    technologies.CSS,
-    technologies.JavaScript,
+    technologies.python,
+    technologies.cpp,
+    technologies.arduino,
+    technologies.rasPi,
+    technologies.html,
+    technologies.css,
+    technologies.javaScript,
   ],
 };
 export const finsult = {
@@ -62,9 +62,9 @@ export const finsult = {
     "A fun project to identify people in images and generate insults based on their facial expressions.",
   image: "/images/projects/FInsult.png",
   technologies: [
-    technologies.JavaScript,
-    technologies.NodeJs,
-    technologies.Express,
+    technologies.javaScript,
+    technologies.nodeJs,
+    technologies.express,
   ],
   github: "https://github.com/up730418/subversive",
 };
@@ -75,12 +75,12 @@ export const liveScore = {
     "A live scoreboard that retrieves scores from `swescore` and displays them on a scoreboard in realtime. Scores are collated from many active devices with WebSockets and updated live, stacking the incoming scores. Built to support unreliable internet connections at SUTL events.",
   image: "/images/projects/LiveScore.png",
   technologies: [
-    technologies.Vue,
-    technologies.TypeScript,
-    technologies.NodeJs,
-    technologies.Express,
-    technologies.SQL,
-    technologies.WebSockets,
+    technologies.vue,
+    technologies.typeScript,
+    technologies.nodeJs,
+    technologies.express,
+    technologies.sql,
+    technologies.webSockets,
   ],
 };
 
