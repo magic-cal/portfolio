@@ -6,7 +6,6 @@ const { userId, serviceId, contactTemplateId } = config.emailjs;
 export const useEmailService = <T extends {}>(
   templateID: string = contactTemplateId
 ) => {
-  console.log("useEmailService: ", userId, serviceId, templateID);
   const sendEmail = async (data: T) => {
     try {
       const result = await emailjs.send(serviceId, templateID, data, userId);
