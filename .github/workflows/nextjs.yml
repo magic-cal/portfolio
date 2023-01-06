@@ -72,6 +72,10 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+      - name: Set environment variables
+        run: |
+          touch .env.local
+          echo NEXT_PUBLIC_EMAILJS_USER_ID=${{ secrets.NEXT_PUBLIC_EMAILJS_USER_ID }} >> .env.local
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Static HTML export with Next.js
