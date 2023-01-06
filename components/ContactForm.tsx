@@ -1,9 +1,11 @@
 import React from "react";
 import { Box, Grid, Button, TextField } from "@mui/material";
 import { useContactForm } from "./hooks/contactForm";
+import { LoadingButton } from "@mui/lab";
 
 export default function ContactForm() {
-  const { handleChange, errors, handleSubmit } = useContactForm();
+  const { handleChange, errors, handleSubmit, submitted, fields, loading } =
+    useContactForm();
 
   return (
     <>
@@ -11,7 +13,15 @@ export default function ContactForm() {
         <form onSubmit={handleSubmit}>
           <Grid container spacing={2}>
             <Grid item xs={12}>
+              {submitted && (
+                <Box component="div" sx={{ color: "success.main" }}>
+                  Thank you for your message!
+                </Box>
+              )}
+            </Grid>
+            <Grid item xs={12}>
               <TextField
+                value={fields.name}
                 onChange={(e) => handleChange("name", e)}
                 label="Name"
                 color="secondary"
@@ -26,6 +36,7 @@ export default function ContactForm() {
             </Grid>
             <Grid item xs={12}>
               <TextField
+                value={fields.email}
                 onChange={(e) => handleChange("email", e)}
                 label="Email"
                 color="secondary"
@@ -40,6 +51,7 @@ export default function ContactForm() {
             </Grid>
             <Grid item xs={12}>
               <TextField
+                value={fields.phoneNumber}
                 onChange={(e) => handleChange("phoneNumber", e)}
                 label="Phone"
                 color="secondary"
@@ -54,6 +66,7 @@ export default function ContactForm() {
             </Grid>
             <Grid item xs={12}>
               <TextField
+                value={fields.message}
                 onChange={(e) => handleChange("message", e)}
                 label="Message"
                 color="secondary"
@@ -69,9 +82,15 @@ export default function ContactForm() {
               />
             </Grid>
             <Grid item xs={12}>
-              <Button type="submit" variant="outlined" color="secondary">
-                Submit
-              </Button>
+              <LoadingButton
+                loading={loading}
+                type="submit"
+                variant="outlined"
+                color="secondary"
+              >
+                {/* Submit or if submitted, then tick icon from mui */}
+                {submitted ? "✓" : "Submit"}
+              </LoadingButton>
             </Grid>
           </Grid>
         </form>
