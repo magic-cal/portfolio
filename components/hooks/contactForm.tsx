@@ -1,5 +1,7 @@
 import { useState } from "react";
+import { useEmailService } from "./email";
 import { FormValidationRules, useValidation } from "./formValidation";
+import { config } from "../../config";
 
 // @TODO: Refactor this to use a generic type for forms
 
@@ -11,6 +13,8 @@ export interface ContactFormFields {
 }
 
 export const useContactForm = () => {
+  const [submitted, setSubmitted] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(false);
   const [fields, setFields] = useState<ContactFormFields>({
     name: "",
     email: "",
@@ -44,6 +48,10 @@ export const useContactForm = () => {
   const { validate, errors } =
     useValidation<ContactFormFields>(validationRules);
 
+  const { sendEmail } = useEmailService<ContactFormFields>(
+    config.emailjs.contactTemplateId
+  );
+
   const handleChange = (
     target: keyof ContactFormFields,
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -53,18 +61,30 @@ export const useContactForm = () => {
       [target]: e.target.value,
     });
     errors[target] = "";
+    setSubmitted(false);
   };
 
   const validateForm = () => {
     return validate(fields);
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!validateForm()) {
       return;
     }
-    // Add this to a lambda server function
+    setLoading(true);
+    // @TODO: Move this to a lambda server function
+    if (await sendEmail(fields)) {
+      setFields({
+        name: "",
+        email: "",
+        phoneNumber: "",
+        message: "",
+      });
+      setSubmitted(true);
+    }
+    setLoading(false);
   };
 
   return {
@@ -73,5 +93,7 @@ export const useContactForm = () => {
     validateForm,
     errors,
     handleSubmit,
+    submitted,
+    loading,
   };
 };
