@@ -36,6 +36,14 @@ a:hover::after {
   transform-origin: bottom left;
 }
 
+a.no-animation::after {
+  display: none;
+}
+
+a.no-animation:hover::after {
+  display: none;
+}
+
 * {
   box-sizing: border-box;
 }
