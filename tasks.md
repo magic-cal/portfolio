@@ -2,12 +2,14 @@
 
 ## Tasks
 
-- Add about me information
 - Add career history
-- Contact details
+- Add Footer
+- Project Information Page
 
 ## Issues
 
 - Set 3d models to be larger on about section
 
 ## Technical
+
+- Improve loading time
