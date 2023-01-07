@@ -14,6 +14,8 @@ import ExpandMore from "@mui/icons-material/ExpandMore";
 import Link from "next/link";
 import About from "../components/sections/About";
 import ContactSection from "../components/sections/ContactSection";
+import Experience from "../components/sections/Experience";
+import { experience } from "../components/data/workExperience";
 
 const Home: NextPage = () => {
   return (
@@ -37,7 +39,7 @@ const Home: NextPage = () => {
             <Box component="div" alignItems="center">
               <ChipStack chips={highlightTechnologies} justify="center" />
             </Box>
-            <Grid justifyItems="center" sx={{ pt: 2 }}>
+            <Grid justifyItems="center">
               <Grid item>
                 <Link href="#about" scroll={false}>
                   <IconButton aria-label="more" size="large" color="secondary">
@@ -48,6 +50,8 @@ const Home: NextPage = () => {
             </Grid>
           </div>
         </BackgroundThreeD>
+
+        <Experience workExperience={experience} />
 
         <About />
         <ProjectSummaries projects={projects} />

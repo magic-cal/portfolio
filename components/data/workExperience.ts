@@ -1,6 +1,6 @@
 import { technologies, Technology } from "./technologies";
 
-type Present = "present";
+export type Present = "Present";
 export interface ExperienceSummary {
   sequence: number;
   title: string;
@@ -19,14 +19,13 @@ export const premierSystems: ExperienceSummary = {
   title: "Premier Systems",
   role: "Junior Software Engineer",
   description:
-    "Developed a large modern web application with Vue, Typescript and C# (.NET 6)\
-Led Integrations with external services such as Square and EposNow\
-Created end-to-end solutions, from inception to construction, deployment, and maintenance\
-Drove product and technical decisions as the key knowledge holder for a standalone PWA\
-Collaborated closely, cross-discipline, with the small and focused agile team\
-Represented the company at International events and awards\
+    "Developed a large modern web application with Vue, Typescript and C# (.NET 6). \
+Led Integrations with external services such as Square and EposNow. \
+Created end-to-end solutions, from inception to construction, deployment, and maintenance. \
+Drove product and technical decisions as the key knowledge holder for a standalone PWA. \
+Collaborated closely, cross-discipline, with the small and focused agile team. \
+Represented the company at International events and awards. \
 ",
-  image: "premier-systems.png",
   technologies: [
     technologies.vue,
     technologies.typeScript,
@@ -37,7 +36,7 @@ Represented the company at International events and awards\
   ],
   url: "https://www.premiersystems.co.uk/",
   startDate: new Date("2020-08-01"),
-  endDate: "present",
+  endDate: "Present",
 };
 
 const university: ExperienceSummary = {
@@ -45,12 +44,12 @@ const university: ExperienceSummary = {
   title: "University of Portsmouth",
   role: "Computer Science BSc (Hons)",
   description:
-    "Graduated as Valedictorian with 1st Class Honours, 4.25 GPA\
-Relevant Coursework: Data Structures and Algorithms, Distributed Systems and Security, Security And Cryptography, Discrete Mathematics and Functional Programming, Robotics\
-Dissertation: Vue, Node, TypeScript - Managing and Scheduling Vessels for Brewing and Distilling\
-Awarded Outstanding Contribution to University Sport Full colours by The Students Union \
-Received The British Computer Society’s Best Business Solution Dissertation Award\
-President of the University of Portsmouth Gymnastics and Trampolining society\
+    "Graduated as Valedictorian with 1st Class Honours, 4.25 GPA. \
+Relevant Coursework: Data Structures and Algorithms, Distributed Systems and Security, Security And Cryptography, Discrete Mathematics and Functional Programming, Robotics. \
+Dissertation: Vue, Node, TypeScript - Managing and Scheduling Vessels for Brewing and Distilling. \
+Awarded Outstanding Contribution to University Sport Full colours by The Students Union. \
+Received The British Computer Society’s Best Business Solution Dissertation Award. \
+President of the University of Portsmouth Gymnastics and Trampolining society. \
 ",
   technologies: [
     technologies.sql,
@@ -69,9 +68,9 @@ const sportingLeagues: ExperienceSummary = {
   title: "British Trampolining & Gymnastics Leagues",
   role: "Technology Officer",
   description:
-    "Developed and maintained competition systems and databases for 4,000 team members\
-Managed live scoring systems and displays for sporting events: Python, Vue JS, SQL\
-Implemented systems to improve manual tasks, reducing pre-competition workload by 60%\
+    "Developed and maintained competition systems and databases for 4,000 team members. \
+Managed live scoring systems and displays for sporting events: Python, Vue JS, SQL. \
+Implemented systems to improve manual tasks, reducing pre-competition workload by 60%. \
 ",
   technologies: [
     technologies.php,
@@ -82,7 +81,7 @@ Implemented systems to improve manual tasks, reducing pre-competition workload b
   ],
   url: "https://Sutleague.co.uk",
   startDate: new Date("2018-05-01"),
-  endDate: "present",
+  endDate: "Present",
 };
 
 const technologyAmbassador: ExperienceSummary = {
@@ -90,7 +89,7 @@ const technologyAmbassador: ExperienceSummary = {
   title: "University of Portsmouth",
   role: "Technology Ambassador",
   description:
-    "Motivated people of all ages at outreach programs and STEM public speaking events\
+    "Motivated people of all ages at outreach programs and STEM public speaking events. \
 Collaborated with academic staff and Promoted Science and Technology events",
   technologies: [technologies.python],
   startDate: new Date("2017-10-01"),
@@ -102,10 +101,10 @@ const magic = {
   title: "Callum McClure Magician",
   role: "Magician",
   description:
-    "Performed at events such as The Royal Variety Performance aftershow party\
-Built a professional reputation and networked with clients at business events and functions\
-Marketed and promoted with considerable self-determination and motivation\
-Negotiated and discussed with clients to secure the best service for their events\
+    "Performed at events such as The Royal Variety Performance aftershow party. \
+Built a professional reputation and networked with clients at business events and functions. \
+Marketed and promoted with considerable self-determination and motivation. \
+Negotiated and discussed with clients to secure the best service for their events. \
 ",
   technologies: [
     technologies.python,
@@ -115,13 +114,13 @@ Negotiated and discussed with clients to secure the best service for their event
   ],
 };
 
-export const WorkExperience: ExperienceSummary[] = [
+export const workExperience: ExperienceSummary[] = [
   premierSystems,
   sportingLeagues,
 ];
-const Education: ExperienceSummary[] = [university];
+export const education: ExperienceSummary[] = [university];
 
-export const Experience: ExperienceSummary[] = [
-  ...WorkExperience,
-  ...Education,
-];
+export const experience: ExperienceSummary[] = [
+  ...workExperience,
+  ...education,
+].sort((a, b) => a.sequence - b.sequence);
