@@ -54,6 +54,7 @@ export const subversive = {
     technologies.css,
     technologies.javaScript,
   ],
+  github: "https://github.com/up730418/subversive",
 };
 export const finsult = {
   id: "4",
@@ -66,7 +67,6 @@ export const finsult = {
     technologies.nodeJs,
     technologies.express,
   ],
-  github: "https://github.com/up730418/subversive",
 };
 export const liveScore = {
   id: "5",

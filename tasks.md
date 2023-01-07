@@ -2,8 +2,6 @@
 
 ## Tasks
 
-- Add career history
-- Add Footer
 - Project Information Page
 
 ## Issues
