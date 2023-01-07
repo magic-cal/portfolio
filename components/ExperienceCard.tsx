@@ -9,22 +9,38 @@ export interface ExperienceCardProps {
   experience: ExperienceSummary;
 }
 
+const MIN_BULLET_POINTS = 2;
+
+const getBulletPointList = (points?: string[]) =>
+  !points || points.length === 0 ? null : (
+    <ul style={{ marginTop: 0 }}>
+      {points.map((point, index) => (
+        <li key={index}>{point}</li>
+      ))}
+    </ul>
+  );
+
 export default function ExperienceCard(props: ExperienceCardProps) {
+  const {
+    isExpanded,
+    toggleExpanded,
+    itemsToDisplay: filteredBulletPoints,
+  } = useExpander(props.experience.bulletPoints ?? [], MIN_BULLET_POINTS);
+
   const item = props.experience;
   return (
-    <Card>
+    <Card onClick={toggleExpanded}>
       <CardContent>
         <Typography variant="h4" component="h4">
-          {item.title}
+          {item.role}
         </Typography>
         <Typography variant="h5" component="h5" color="text.secondary">
-          {item.role}
+          {item.title}
         </Typography>
         <Typography color="text.secondary" sx={{ pb: 2 }}>
           {formatDatePeriod(item.startDate, item.endDate)}
         </Typography>
         <ChipStack chips={item.technologies} />
-
         {item.image && (
           <CardMedia
             component="img"
@@ -34,7 +50,14 @@ export default function ExperienceCard(props: ExperienceCardProps) {
             sx={{ pb: 2 }}
           />
         )}
-        <Typography variant="body2" color="text.secondary" sx={{ pb: 2 }}>
+        {getBulletPointList(filteredBulletPoints)}
+        {(item.bulletPoints?.length ?? 0) > filteredBulletPoints.length && (
+          <Typography color="text.secondary" sx={{ textAlign: "center" }}>
+            More...
+          </Typography>
+        )}
+
+        <Typography variant="body1" sx={{ pb: 2 }}>
           {item.description}
         </Typography>
       </CardContent>
