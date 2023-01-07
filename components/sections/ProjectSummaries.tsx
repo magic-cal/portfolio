@@ -14,6 +14,8 @@ import { ProjectSummary } from "../data/projects";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import { useState } from "react";
+import { useExpander } from "../hooks/expander";
+import ExpandButton from "../ExpandButton";
 
 export interface ProjectSummariesProps {
   projects: ProjectSummary[];
@@ -21,15 +23,11 @@ export interface ProjectSummariesProps {
 
 export default function ProjectSummaries(props: ProjectSummariesProps) {
   const minNumberOfProjects = 3;
-  const [isExpanded, setIsExpanded] = useState(false);
-
-  const projects = isExpanded
-    ? props.projects
-    : props.projects.slice(0, minNumberOfProjects);
-
-  const toggleExpanded = () => {
-    setIsExpanded(!isExpanded);
-  };
+  const {
+    isExpanded,
+    toggleExpanded,
+    itemsToDisplay: projects,
+  } = useExpander(props.projects, minNumberOfProjects);
 
   return (
     <Box component="div" sx={{ pb: 2 }}>
@@ -83,15 +81,10 @@ export default function ProjectSummaries(props: ProjectSummariesProps) {
       {/* More button to expand and collapse the extra values */}
       <Grid container justifyContent="center">
         <Grid item>
-          <Button
-            variant="outlined"
-            endIcon={isExpanded ? <ExpandLess /> : <ExpandMore />}
-            onClick={toggleExpanded}
-            size="large"
-            color="secondary"
-          >
-            {isExpanded ? "Less" : "More"}
-          </Button>
+          <ExpandButton
+            isExpanded={isExpanded}
+            toggleExpanded={toggleExpanded}
+          />
         </Grid>
       </Grid>
     </Box>
