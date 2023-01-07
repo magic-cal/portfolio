@@ -1,12 +1,10 @@
-import * as React from "react";
-
-import { Grid, Typography, Divider, Button } from "@mui/material";
-
-import SideBySideLayout from "../SideBySideLayout";
-import ContentImageView from "../ContentImageView";
-import LaptopContentFrame from "../LaptopContentFrame";
+import { Box, Button, Grid, Typography } from "@mui/material";
 import Image from "next/image";
+import ContentImageView from "../ContentImageView";
 import { externalLinks } from "../data/links";
+import LaptopContentFrame from "../LaptopContentFrame";
+import SectionHeader from "../SectionHeader";
+import SideBySideLayout from "../SideBySideLayout";
 
 const framedImage = (src: string, alt: string) => (
   <LaptopContentFrame>
@@ -86,11 +84,8 @@ const technologies = (
 
 export default function About() {
   return (
-    <>
-      <Divider sx={{ bgcolor: "secondary.dark" }} />
-      <Typography variant="h2" component="h2" gutterBottom id="about">
-        About
-      </Typography>
+    <Box component="div" sx={{ pb: 2 }}>
+      <SectionHeader>About</SectionHeader>
       <Grid container spacing={2} justifyContent="center" sx={{ pb: 2 }}>
         <Grid item xs={12}>
           <SideBySideLayout
@@ -128,6 +123,6 @@ export default function About() {
           </Button>
         </Grid>
       </Grid>
-    </>
+    </Box>
   );
 }

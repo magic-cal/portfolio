@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <Box
       component="div"
-      sx={{ bgcolor: "secondary.main", color: "secondary.contrastText", p: 2 }}
+      sx={{ bgcolor: "secondary.dark", color: "secondary.contrastText", p: 2 }}
     >
       <Grid container justifyContent="center" spacing={2}>
         {socialLinks.map((link, index) => (

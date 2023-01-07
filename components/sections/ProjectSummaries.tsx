@@ -1,21 +1,18 @@
-import * as React from "react";
 import {
   Box,
-  Grid,
-  Typography,
   Card,
   CardContent,
   CardMedia,
   Divider,
-  Button,
+  Grid,
+  Typography,
 } from "@mui/material";
 import ChipStack from "../ChipStack";
 import { ProjectSummary } from "../data/projects";
-import ExpandMore from "@mui/icons-material/ExpandMore";
-import ExpandLess from "@mui/icons-material/ExpandLess";
-import { useState } from "react";
-import { useExpander } from "../hooks/expander";
 import ExpandButton from "../ExpandButton";
+import { useExpander } from "../hooks/expander";
+import LinkIconButton from "../LinkIconButton";
+import SectionHeader from "../SectionHeader";
 
 export interface ProjectSummariesProps {
   projects: ProjectSummary[];
@@ -31,10 +28,7 @@ export default function ProjectSummaries(props: ProjectSummariesProps) {
 
   return (
     <Box component="div" sx={{ pb: 2 }}>
-      <Divider sx={{ bgcolor: "secondary.dark" }} />
-      <Typography variant="h2" component="h2" gutterBottom id="projects">
-        Projects
-      </Typography>
+      <SectionHeader>Projects</SectionHeader>
       <Grid
         container
         direction="row"
@@ -53,9 +47,16 @@ export default function ProjectSummaries(props: ProjectSummariesProps) {
           >
             <Card>
               <CardContent>
-                <Typography variant="h5" component="h2">
-                  {project.title}
-                </Typography>
+                <Grid container justifyContent="space-between">
+                  <Grid item>
+                    <Typography variant="h5" component="h2">
+                      {project.title}
+                    </Typography>
+                  </Grid>
+                  <Grid item>
+                    <LinkIconButton link={project.url || project.github} />
+                  </Grid>
+                </Grid>
                 {project.image && (
                   <CardMedia
                     component="img"

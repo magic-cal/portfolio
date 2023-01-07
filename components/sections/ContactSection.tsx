@@ -14,17 +14,14 @@ import { externalLinks, socialLinks } from "../data/links";
 import { linkToChip } from "../data/linkService";
 import SideBySideLayout from "../SideBySideLayout";
 import ContactForm from "../ContactForm";
+import SectionHeader from "../SectionHeader";
 
 const contactChips = socialLinks.map(linkToChip);
 
 export default function ContactSection() {
   return (
     <Box component="div" sx={{ pb: 2 }}>
-      <Divider sx={{ bgcolor: "secondary.dark" }} />
-      <Typography variant="h2" component="h2" gutterBottom id="contact">
-        Contact
-      </Typography>
-
+      <SectionHeader>Contact</SectionHeader>
       <SideBySideLayout
         additionalContent={
           <Card>

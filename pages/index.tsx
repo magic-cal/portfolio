@@ -35,7 +35,6 @@ const Home: NextPage = () => {
           <div className={styles.main}>
             <h1 className={styles.title}>Callum McClure</h1>
             <h2 className={styles.subtitle}>Software Engineer</h2>
-            {/* @TODO: Move clips to a content file */}
             <Box component="div" alignItems="center">
               <ChipStack chips={highlightTechnologies} justify="center" />
             </Box>
@@ -50,11 +49,9 @@ const Home: NextPage = () => {
             </Grid>
           </div>
         </BackgroundThreeD>
-
-        <Experience workExperience={experience} />
-
         <About />
         <ProjectSummaries projects={projects} />
+        <Experience workExperience={experience} />
         <ContactSection />
       </main>
     </div>
