@@ -128,7 +128,7 @@ export const technologies = {
   },
   dotNet: {
     label: ".NET",
-    avatar: "https://cdn.worldvectorlogo.com/logos/dot-net.svg",
+    avatar: "/images/logos/dotnet.png",
     highlight: false,
   },
   gcp: {

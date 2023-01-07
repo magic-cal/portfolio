@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
+import Footer from "./sections/Footer";
 
 const darkTheme = createTheme({
   palette: {
@@ -20,9 +21,7 @@ const Layout = (props: any) => {
         {props.children}
         {/* </ColorModeContext.Provider> */}
         {/* Temporary footer space */}
-        <br />
-        <br />
-        <br />
+        <Footer />
       </ThemeProvider>
     </>
   );

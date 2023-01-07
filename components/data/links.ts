@@ -25,7 +25,7 @@ export const externalLinks = {
   email: {
     url: "mailto:callum.mcclure98@gmail.com",
     text: "Email",
-    icon: "email",
+    imgSrc: "/images/logos/email.png",
   },
 };
 
