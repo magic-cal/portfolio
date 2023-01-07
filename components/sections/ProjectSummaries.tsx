@@ -64,7 +64,7 @@ export default function ProjectSummaries(props: ProjectSummariesProps) {
                     height="200"
                     image={project.image}
                     alt={project.title}
-                    sx={{ pb: 2 }}
+                    sx={{ pb: 2, objectFit: "scale-down" }}
                   />
                 )}
                 <Typography

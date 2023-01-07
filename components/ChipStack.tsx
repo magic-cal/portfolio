@@ -30,7 +30,12 @@ export default function ChipStack(props: ChipStackProps) {
   });
 
   return (
-    <Grid container spacing={props.spacing} justifyContent={props.justify}>
+    <Grid
+      container
+      spacing={props.spacing}
+      justifyContent={props.justify}
+      sx={{ pb: 2 }}
+    >
       {chips}
     </Grid>
   );
