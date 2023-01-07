@@ -1,5 +1,4 @@
 import { Card, CardContent, CardMedia, Typography } from "@mui/material";
-import { useState } from "react";
 import ChipStack from "./ChipStack";
 import { ExperienceSummary } from "./data/workExperience";
 import { useExpander } from "./hooks/expander";
@@ -21,11 +20,10 @@ const getBulletPointList = (points?: string[]) =>
   );
 
 export default function ExperienceCard(props: ExperienceCardProps) {
-  const {
-    isExpanded,
-    toggleExpanded,
-    itemsToDisplay: filteredBulletPoints,
-  } = useExpander(props.experience.bulletPoints ?? [], MIN_BULLET_POINTS);
+  const { toggleExpanded, itemsToDisplay: filteredBulletPoints } = useExpander(
+    props.experience.bulletPoints ?? [],
+    MIN_BULLET_POINTS
+  );
 
   const item = props.experience;
   return (
@@ -50,6 +48,7 @@ export default function ExperienceCard(props: ExperienceCardProps) {
             sx={{ pb: 2 }}
           />
         )}
+
         {getBulletPointList(filteredBulletPoints)}
         {(item.bulletPoints?.length ?? 0) > filteredBulletPoints.length && (
           <Typography color="text.secondary" sx={{ textAlign: "center" }}>
