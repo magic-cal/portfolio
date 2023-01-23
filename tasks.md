@@ -5,6 +5,9 @@
 - [x] Project Information Page
 - [] Improved padding to have more space between sections
 - [] Animation/ transition of images and text (Framer?)
+- [] Error logging (Sentry?/ Rollbar?)
+- [] Add more content to the project information page
+- [] Add analytics (Google Analytics?)
 
 ## Issues
 
