@@ -84,7 +84,7 @@ const technologies = (
 
 export default function About() {
   return (
-    <Box component="div" sx={{ pb: 2 }}>
+    <Box component="div" id="about" sx={{ pb: 2 }}>
       <SectionHeader>About</SectionHeader>
       <Grid container spacing={2} justifyContent="center" sx={{ pb: 2 }}>
         <Grid item xs={12}>
