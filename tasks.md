@@ -2,12 +2,16 @@
 
 ## Tasks
 
-- Project Information Page
+- [x] Project Information Page
+- [] Improved padding to have more space between sections
+- [] Animation/ transition of images and text (Framer?)
 
 ## Issues
 
-- Set 3d models to be larger on about section
+- [x] About Hyperlink missing
+- [x] Set 3d models to be larger on about section
 
 ## Technical
 
-- Improve loading time
+- [] Improve loading time
+- [] Identify overflow in 3d models

@@ -65,21 +65,26 @@ function Model(props: LaptopContentFrameProps) {
           <mesh geometry={nodes["Cube008_2"].geometry}>
             {/* Allow html content to be shown within the laptop screen */}
             <Html
-              className="content"
               rotation-x={-Math.PI / 2}
-              position={[0, 0.04, -0.5]}
+              position={[0, 0.04, -0.05]}
               transform
-              occlude // Hide content behind other objects
+              occlude
+              style={{
+                width: "334px",
+                height: "216px",
+              }}
             >
               <div
                 className="wrapper"
                 onPointerDown={(e) => e.stopPropagation()}
                 style={{
-                  width: "675px",
-                  height: "440px",
+                  width: "668px",
+                  height: "432px",
                   transform: "scale(0.5)",
                   backgroundColor: "black",
                   borderRadius: "10px",
+                  transformOrigin: "top left",
+                  padding: "10px",
                 }}
               >
                 {props.children}
@@ -125,3 +130,4 @@ export default function LaptopContentFrame(props: LaptopContentFrameProps) {
     </Suspense>
   );
 }
+useGLTF.preload("/models/mac-draco.glb");

@@ -7,15 +7,15 @@ import SectionHeader from "../SectionHeader";
 import SideBySideLayout from "../SideBySideLayout";
 
 const framedImage = (src: string, alt: string) => (
-  <LaptopContentFrame>
-    <div
-      style={{
-        position: "relative",
-        width: "100%",
-        height: "100%",
-        minHeight: "200px",
-      }}
-    >
+  <LaptopContentFrame
+    style={{
+      position: "relative",
+      width: "100%",
+      height: "100%",
+      minHeight: "300px",
+    }}
+  >
+    <div>
       <Image src={src} alt={alt} layout="fill" objectFit="contain" />
     </div>
   </LaptopContentFrame>
@@ -89,6 +89,7 @@ export default function About() {
       <Grid container spacing={2} justifyContent="center" sx={{ pb: 2 }}>
         <Grid item xs={12}>
           <SideBySideLayout
+            inverted={true}
             mainContent={aboutMe}
             additionalContent={framedImage(
               "/images/projects/Amber.png",
@@ -98,7 +99,6 @@ export default function About() {
         </Grid>
         <Grid item xs={12}>
           <ContentImageView
-            inverted={true}
             mainContent={aboutMagic}
             imgSrc={"/images/logos/theMagicCircle.png"}
             imgAlt={"The Magic Circle logo"}
@@ -106,6 +106,7 @@ export default function About() {
         </Grid>
         <Grid item xs={12}>
           <SideBySideLayout
+            inverted={true}
             mainContent={technologies}
             additionalContent={framedImage(
               "/images/projects/vscodeScreenshot.png",
