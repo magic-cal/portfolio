@@ -40,7 +40,7 @@ const Home: NextPage = () => {
             </Box>
             <Grid justifyItems="center">
               <Grid item>
-                <Link href="#about" scroll={false}>
+                <Link href="#About" scroll={false}>
                   <IconButton aria-label="more" size="large" color="secondary">
                     <ExpandMore fontSize="large" />
                   </IconButton>

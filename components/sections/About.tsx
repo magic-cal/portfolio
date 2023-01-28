@@ -5,6 +5,8 @@ import { externalLinks } from "../data/links";
 import LaptopContentFrame from "../LaptopContentFrame";
 import SectionHeader from "../SectionHeader";
 import SideBySideLayout from "../SideBySideLayout";
+import SectionBase from "./SectionBase";
+import { Link } from "@mui/icons-material";
 
 const framedImage = (src: string, alt: string) => (
   <LaptopContentFrame
@@ -84,8 +86,7 @@ const technologies = (
 
 export default function About() {
   return (
-    <Box component="div" id="about" sx={{ pb: 2 }}>
-      <SectionHeader>About</SectionHeader>
+    <SectionBase sectionTitle="About">
       <Grid container spacing={2} justifyContent="center" sx={{ pb: 2 }}>
         <Grid item xs={12}>
           <SideBySideLayout
@@ -114,16 +115,22 @@ export default function About() {
             )}
           />
         </Grid>
-        <Grid item xs={12}>
+
+        {/* Center aligned button */}
+
+        <Grid item justifyItems="center" justifySelf="center">
+          {/* <Grid item xs={3}> */}
           <Button
             variant="outlined"
             color="secondary"
             href={externalLinks.cv.url}
           >
             View CV
+            <Link sx={{ ml: 1 }} />
           </Button>
+          {/* </Grid> */}
         </Grid>
       </Grid>
-    </Box>
+    </SectionBase>
   );
 }

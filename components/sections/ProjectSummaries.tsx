@@ -13,6 +13,7 @@ import ExpandButton from "../ExpandButton";
 import { useExpander } from "../hooks/expander";
 import LinkIconButton from "../LinkIconButton";
 import SectionHeader from "../SectionHeader";
+import SectionBase from "./SectionBase";
 
 export interface ProjectSummariesProps {
   projects: ProjectSummary[];
@@ -27,8 +28,7 @@ export default function ProjectSummaries(props: ProjectSummariesProps) {
   } = useExpander(props.projects, minNumberOfProjects);
 
   return (
-    <Box component="div" sx={{ pb: 2 }}>
-      <SectionHeader>Projects</SectionHeader>
+    <SectionBase sectionTitle="Projects">
       <Grid
         container
         direction="row"
@@ -89,6 +89,6 @@ export default function ProjectSummaries(props: ProjectSummariesProps) {
           />
         </Grid>
       </Grid>
-    </Box>
+    </SectionBase>
   );
 }

@@ -15,13 +15,13 @@ import { linkToChip } from "../data/linkService";
 import SideBySideLayout from "../SideBySideLayout";
 import ContactForm from "../ContactForm";
 import SectionHeader from "../SectionHeader";
+import SectionBase from "./SectionBase";
 
 const contactChips = socialLinks.map(linkToChip);
 
 export default function ContactSection() {
   return (
-    <Box component="div" sx={{ pb: 2 }}>
-      <SectionHeader>Contact</SectionHeader>
+    <SectionBase sectionTitle="Contact">
       <SideBySideLayout
         additionalContent={
           <Card>
@@ -52,6 +52,6 @@ export default function ContactSection() {
           </Box>
         }
       />
-    </Box>
+    </SectionBase>
   );
 }

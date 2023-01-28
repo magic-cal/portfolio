@@ -4,6 +4,7 @@ import ExpandButton from "../ExpandButton";
 import ExperienceCard from "../ExperienceCard";
 import { useExpander } from "../hooks/expander";
 import SectionHeader from "../SectionHeader";
+import SectionBase from "./SectionBase";
 
 export interface ExperienceProps {
   workExperience: ExperienceSummary[];
@@ -17,8 +18,7 @@ export default function Experience(props: ExperienceProps) {
   } = useExpander(props.workExperience, 3);
 
   return (
-    <Box component="div" sx={{ pb: 2 }}>
-      <SectionHeader>Experience</SectionHeader>
+    <SectionBase sectionTitle="Experience">
       <Grid
         container
         direction="row"
@@ -47,6 +47,6 @@ export default function Experience(props: ExperienceProps) {
           />
         </Grid>
       </Grid>
-    </Box>
+    </SectionBase>
   );
 }
