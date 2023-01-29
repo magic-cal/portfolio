@@ -29,10 +29,10 @@ export default function ExperienceCard(props: ExperienceCardProps) {
   return (
     <Card onClick={toggleExpanded}>
       <CardContent>
-        <Typography variant="h4" component="h4">
+        <Typography variant="h5" component="h5">
           {item.role}
         </Typography>
-        <Typography variant="h5" component="h5" color="text.secondary">
+        <Typography variant="h6" component="h6" color="text.secondary">
           {item.title}
         </Typography>
         <Typography color="text.secondary" sx={{ pb: 2 }}>

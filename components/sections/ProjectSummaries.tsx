@@ -47,18 +47,9 @@ export default function ProjectSummaries(props: ProjectSummariesProps) {
           >
             <Card>
               <CardContent>
-                {project.image && (
-                  <CardMedia
-                    component="img"
-                    height="200"
-                    image={project.image}
-                    alt={project.title}
-                    sx={{ objectFit: "contain" }}
-                  />
-                )}
                 <Grid container justifyContent="space-between">
                   <Grid item>
-                    <Typography variant="h5" component="h2">
+                    <Typography variant="h5" component="h5">
                       {project.title}
                     </Typography>
                   </Grid>
@@ -66,6 +57,15 @@ export default function ProjectSummaries(props: ProjectSummariesProps) {
                     <LinkIconButton link={project.url || project.github} />
                   </Grid>
                 </Grid>
+                {project.image && (
+                  <CardMedia
+                    component="img"
+                    height="200"
+                    image={project.image}
+                    alt={project.title}
+                    sx={{ objectFit: "contain", mb: 2 }}
+                  />
+                )}
 
                 <Typography
                   variant="body2"
