@@ -11,6 +11,7 @@ import {
 import { Group, Object3D } from "three";
 import { GltfObjectMap } from "./utils/threeJsUtils";
 import { useReducedMotion } from "./hooks/useReducedMotion";
+import { projectStyles } from "./data/styles";
 
 export type LaptopContentFrameProps = PropsWithChildren & {
   style?: React.CSSProperties;
@@ -110,14 +111,25 @@ function Model(props: LaptopContentFrameProps) {
 
 export default function LaptopContentFrame(props: LaptopContentFrameProps) {
   return (
-    <Suspense fallback={<h1>loafing</h1>}>
+    <Suspense fallback={null}>
       <Canvas camera={{ position: [-5, 0, -15], fov: 55 }} {...props}>
         <pointLight position={[10, 10, 10]} intensity={1.5} />
+        {/* Coloured key lights */}
+        <pointLight
+          position={[0, 10, 5]}
+          intensity={1}
+          color={projectStyles.colours.primary}
+        />
+        <pointLight
+          position={[0, -10, 10]}
+          intensity={0.75}
+          color={projectStyles.colours.accent}
+        />
+
         <Suspense fallback={null}>
           <group rotation={[0, Math.PI, 0]} position={[0, 1, 0]}>
             <Model {...props} />
           </group>
-          <Environment preset="city" />
         </Suspense>
         <ContactShadows position={[0, -4.5, 0]} scale={20} blur={2} far={4.5} />
         <OrbitControls
