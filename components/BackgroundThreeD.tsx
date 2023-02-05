@@ -1,7 +1,7 @@
+import { PerspectiveCamera, Plane, Stars } from "@react-three/drei";
+import { Canvas, useFrame } from "@react-three/fiber";
 import * as React from "react";
 import { useRef } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
-import { Stars, Plane, PerspectiveCamera } from "@react-three/drei";
 import { useScroll } from "./hooks/scroll";
 import { useReducedMotion } from "./hooks/useReducedMotion";
 
@@ -16,6 +16,7 @@ const canvas = {
   minHeight: "100vh",
 };
 
+
 export default function BackgroundThreeD(props: React.PropsWithChildren<{}>) {
   // Allows turning off of motion if user prefers reduced motion
   return (
@@ -29,23 +30,28 @@ export default function BackgroundThreeD(props: React.PropsWithChildren<{}>) {
 }
 
 function StarsScene() {
+  const farStars = useRef<any>(null!);
+  const nearStars = useRef<any>(null!);
+  const starRefs = [farStars, nearStars];
+  const perspectiveCamera = useRef<any>();
   const { scrollOffset } = useScroll();
-  const ref = useRef<any>();
   const reducedMotion = useReducedMotion();
 
   useFrame(() => {
     if (!reducedMotion) {
-      ref.current.rotation.x = scrollOffset * scrollPlaneSpeed;
-      ref.current.rotation.z += panPlaneSpeed;
+      starRefs.forEach((starRef) => {
+        starRef.current.rotation.z += panPlaneSpeed;
+      });
+      perspectiveCamera.current.rotation.x = scrollOffset * scrollPlaneSpeed;
     }
   });
 
   return (
     <>
-      <Stars radius={100} />
-      <Stars radius={500} />
+      <Stars ref={farStars} radius={100} />
+      <Stars ref={nearStars} radius={500} />
       <Plane rotation-x={Math.PI / 2} args={[100, 100, 4, 4]} />
-      <PerspectiveCamera ref={ref} makeDefault />
+      <PerspectiveCamera ref={perspectiveCamera} makeDefault />
     </>
   );
 }
