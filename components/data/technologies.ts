@@ -39,12 +39,12 @@ export const technologies = {
   python: {
     label: "Python",
     avatar: "https://cdn.worldvectorlogo.com/logos/python-5.svg",
-    highlight: true,
+    highlight: false,
   },
   php: {
     label: "PHP",
     avatar: "https://cdn.worldvectorlogo.com/logos/php-1.svg",
-    highlight: true,
+    highlight: false,
   },
   sql: {
     label: "SQL",
@@ -104,7 +104,7 @@ export const technologies = {
   docker: {
     label: "Docker",
     avatar: "https://cdn.worldvectorlogo.com/logos/docker.svg",
-    highlight: false,
+    highlight: true,
   },
   linux: {
     label: "Linux",
@@ -134,12 +134,17 @@ export const technologies = {
   gcp: {
     label: "GCP",
     avatar: "https://cdn.worldvectorlogo.com/logos/google-cloud-platform.svg",
-    highlight: false,
+    highlight: true,
   },
   threeJs: {
     label: "Three.js",
     avatar: "https://cdn.worldvectorlogo.com/logos/threejs-1.svg",
     highlight: false,
+  },
+  addEventListenerzure: {
+    label: "Azure",
+    avatar: "https://cdn.worldvectorlogo.com/logos/azure-2.svg",
+    highlight: true,
   },
 };
 

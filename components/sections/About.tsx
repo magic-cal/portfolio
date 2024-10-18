@@ -31,8 +31,7 @@ const aboutMe = (
     <Typography color="text.secondary">
       Callum is a Software Engineer and Magician based in the UK. He is
       currently working at{" "}
-      <a href="https://premiersystems.com">Premier Systems</a> - Modernising the
-      brewing and distilling industry with a SaaS product BrewMan.
+      <a href="https://pwc.co.uk">PwC Uk</a> - Building tools for AI prompts and managing large scale data brokers, democratising data 
     </Typography>
     <Typography color="text.secondary">
       He is passionate about technology, and has a particular interest in the
@@ -42,8 +41,8 @@ const aboutMe = (
       <a href="https://nodejs.org/">Node.js</a>.
     </Typography>
     <Typography color="text.secondary">
-      In his spare time, he enjoys playing tennis, developing new technology
-      based magic tricks, and exploring new places.
+      In his spare time, he is an avid (if not great) tennis player, develops new technology
+      based magic tricks, and enjoys exploring new places.
     </Typography>
   </div>
 );
@@ -73,11 +72,11 @@ const technologies = (
     </Typography>
     <Typography color="text.secondary">
       Callum is proficient in a wide range of languages, but is most comfortable
-      with JavaScript and TypeScript in the front and backend, with Vue(TS) as
-      the preferred framework for front end. React, C#, Python, Java, and PHP
+      with JavaScript and TypeScript in the front and backend, with React(TS) as
+      the preferred framework for front end. Vue, C#, Python, Java, and PHP
       are also among a long list of technologies he has worked with both at work
       and in personal projects. He is also proficient in a wide range of tools
-      and utilities, including Git, Docker, OpenApi, and GCP. Using and
+      and utilities, including Git, Docker, OpenApi, Azure and GCP. Using and
       maintaining these as part of a CI/CD pipeline, he is able to work on the
       full development lifecycle, from design to deployment.
     </Typography>
@@ -116,10 +115,8 @@ export default function About() {
           />
         </Grid>
 
-        {/* Center aligned button */}
 
         <Grid item justifyItems="center" justifySelf="center">
-          {/* <Grid item xs={3}> */}
           <Button
             variant="outlined"
             color="secondary"
@@ -128,7 +125,6 @@ export default function About() {
             View CV
             <Link sx={{ ml: 1 }} />
           </Button>
-          {/* </Grid> */}
         </Grid>
       </Grid>
     </SectionBase>
