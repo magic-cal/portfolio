@@ -31,7 +31,7 @@ const aboutMe = (
     <Typography color="text.secondary">
       Callum is a Software Engineer and Magician based in the UK. He is
       currently working at{" "}
-      <a href="https://pwc.co.uk">PwC Uk</a> - Building tools for AI prompts and managing large scale data brokers, democratising data 
+      <a href="https://pwc.co.uk">PwC Uk</a> - He develops tools for curating and sharing AI prompts and also manages large-scale data brokers, with a focus on democratising data access across the company.
     </Typography>
     <Typography color="text.secondary">
       He is passionate about technology, and has a particular interest in the

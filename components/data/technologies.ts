@@ -6,9 +6,9 @@ export interface Technology {
 
 // @todo: move images to static folder
 export const technologies = {
-  vue: {
-    label: "Vue",
-    avatar: "https://cdn.worldvectorlogo.com/logos/vue-9.svg",
+  react: {
+    label: "React",
+    avatar: "https://cdn.worldvectorlogo.com/logos/react-2.svg",
     highlight: true,
   },
   typeScript: {
@@ -21,9 +21,9 @@ export const technologies = {
     avatar: "https://cdn.worldvectorlogo.com/logos/logo-javascript.svg",
     highlight: false,
   },
-  react: {
-    label: "React",
-    avatar: "https://cdn.worldvectorlogo.com/logos/react-2.svg",
+  vue: {
+    label: "Vue",
+    avatar: "https://cdn.worldvectorlogo.com/logos/vue-9.svg",
     highlight: true,
   },
   nuxtJs: {
@@ -43,7 +43,7 @@ export const technologies = {
   },
   php: {
     label: "PHP",
-    avatar: "https://cdn.worldvectorlogo.com/logos/php-1.svg",
+    avatar: "https://cdn.worldvectorlogo.com/logos/laravel-1.svg",
     highlight: false,
   },
   sql: {
@@ -133,7 +133,7 @@ export const technologies = {
   },
   gcp: {
     label: "GCP",
-    avatar: "https://cdn.worldvectorlogo.com/logos/google-cloud-platform.svg",
+    avatar: "https://cdn.worldvectorlogo.com/logos/google-cloud-1.svg",
     highlight: true,
   },
   threeJs: {
