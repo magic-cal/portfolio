@@ -15,8 +15,31 @@ export interface ExperienceSummary {
   endDate?: Date | Present;
 }
 
-export const premierSystems: ExperienceSummary = {
+export const pwc: ExperienceSummary = {
   sequence: 1,
+  title: "PwC UK",
+  role: "Full Stack Software Engineer",
+  bulletPoints: [
+   "Lead developer for PwC global AI extension with 2000+ weekly users (React, TS)",
+    "Managed a team of developers, focusing on code quality and efficient feature delivery",
+    "Built a scalable platform for democratising internal and third party data (C#, React, TS)",
+    "Successfully managed support for critical data feeds (e.g. S&P UK data), applying innovative solutions to prevent service interruptions.",
+    "Implemented CI/CD pipelines for automated testing and deployment (Azure, Docker)",
+    "Volunteered 200+ hours for company initiatives, including PwC Panto and recruitment events"
+  ],
+  technologies: [
+    technologies.react,
+    technologies.typeScript,
+    technologies.dotNet,
+    technologies.docker,
+  ],
+  url: "https://www.pwc.co.uk/",
+  startDate: new Date("2023-04-17"),
+  endDate: "Present",
+};
+
+export const premierSystems: ExperienceSummary = {
+  sequence: 2,
   title: "Premier Systems",
   role: "Junior Software Engineer",
   bulletPoints: [
@@ -36,12 +59,12 @@ export const premierSystems: ExperienceSummary = {
     technologies.gitLab,
   ],
   url: "https://www.premiersystems.co.uk/",
-  startDate: new Date("2020-08-01"),
-  endDate: "Present",
+  startDate: new Date("2019-08-01"),
+  endDate: new Date("2023-04-17"),
 };
 
 const university: ExperienceSummary = {
-  sequence: 2,
+  sequence: 3,
   title: "University of Portsmouth",
   role: "Computer Science BSc (Hons)",
   bulletPoints: [
@@ -65,7 +88,7 @@ const university: ExperienceSummary = {
 };
 
 const sportingLeagues: ExperienceSummary = {
-  sequence: 3,
+  sequence: 4,
   title: "British Trampolining & Gymnastics Leagues",
   role: "Technology Officer",
   bulletPoints: [
@@ -86,7 +109,7 @@ const sportingLeagues: ExperienceSummary = {
 };
 
 const technologyAmbassador: ExperienceSummary = {
-  sequence: 4,
+  sequence: 5,
   title: "University of Portsmouth",
   role: "Technology Ambassador",
   bulletPoints: [
@@ -99,7 +122,7 @@ const technologyAmbassador: ExperienceSummary = {
 };
 
 const magic: ExperienceSummary = {
-  sequence: 5,
+  sequence: 6,
   title: "Callum McClure Magician",
   role: "Magician",
   bulletPoints: [
