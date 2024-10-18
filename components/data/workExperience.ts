@@ -144,7 +144,7 @@ const magic: ExperienceSummary = {
 };
 
 export const workExperience: ExperienceSummary[] = [
-  pwc
+  pwc,
   premierSystems,
   sportingLeagues,
   technologyAmbassador,
